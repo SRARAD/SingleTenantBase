@@ -51,6 +51,7 @@ grails.project.dependency.resolution = {
         compile ":hibernate:3.6.10.15"
         runtime ":resources:1.2"
 		compile ":quartz:1.0.1"
+		compile ":scaffolding:2.0.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
