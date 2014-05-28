@@ -1,0 +1,5 @@
+Change stem variable to a lowercase concise name so backup buckets don't overlap.
+Refactor home controller and services to new package name.
+Change base users' passwords.
+Change app name in application.properties.
+Change app name in .project.
