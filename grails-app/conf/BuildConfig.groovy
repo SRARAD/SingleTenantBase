@@ -33,6 +33,7 @@ grails.project.dependency.resolution = {
 		
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
+		mavenRepo "http://repo.grails.org/grails/core"
 
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://snapshots.repository.codehaus.org"
@@ -52,6 +53,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2"
 		compile ":quartz:1.0.1"
 		compile ":scaffolding:2.0.0"
+		compile ":searchable:0.6.7"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
