@@ -45,7 +45,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 		runtime "com.amazonaws:aws-java-sdk:1.7.3"
-        // runtime 'mysql:mysql-connector-java:5.1.22'
+        runtime 'mysql:mysql-connector-java:5.1.22'
     }
 
     plugins {
@@ -54,6 +54,7 @@ grails.project.dependency.resolution = {
 		compile ":quartz:1.0.1"
 		compile ":scaffolding:2.0.0"
 		compile ":searchable:0.6.7"
+		compile ":executor:0.3"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
