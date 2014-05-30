@@ -8,6 +8,7 @@ class BootStrap {
 
 	def springSecurityService
 	def clientDetailsService
+	def searchableService
 
 	def createUser(user,pass,role) {
 		def theUser = new User(username:user,enabled:true,password:pass)
@@ -18,6 +19,7 @@ class BootStrap {
 
 	def init = { servletContext ->
 		log.info 'Boostrapping'
+		searchableService.stopMirroring()
 		TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"))
 		try {
 			if (UserRole.list().size() == 0) { //only load on empty DB
@@ -33,6 +35,7 @@ class BootStrap {
 		}
 		def backup = new DBBackupService()
 		backup.registerListener()
+		searchableService.startMirroring()
 	}
 	def destroy = {
 		
