@@ -1,5 +1,0 @@
-Change stem variable to a lowercase concise name so backup buckets don't overlap.
-Refactor home controller and services to new package name.
-Change base users' passwords.
-Search all files for SingleTenantBase239 and change to new app name.
-Add static searchable = true to searchable domain objects.

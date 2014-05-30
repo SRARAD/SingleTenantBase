@@ -40,3 +40,12 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 ### Other ###
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
+
+## TODO ##
+Things to do when first branching the base repository.
+
+- Change stem DBBackup service variable to a lowercase concise name so backup buckets don't overlap.
+- Refactor home controller and services to new package name.
+- Change base users' passwords.
+- Search all files for SingleTenantBase and change to new app name.
+- Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
