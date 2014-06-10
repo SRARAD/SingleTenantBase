@@ -12,7 +12,7 @@
 		<g:javascript src="jquery-2.1.0.js" />
 		<g:javascript src="chosen.jquery.js" />
 		<g:javascript src="jquery.blockUI.js" />
-		<g:javascript src="jquery.jqpagination.js" />
+		<!-- <g:javascript src="jquery.jqpagination.js" /> -->
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'chosen.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'custom.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'jqpagination.css')}" type="text/css">
+		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'jqpagination.css')}" type="text/css"> -->
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
