@@ -49,3 +49,18 @@ Things to do when first branching the base repository.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
 - Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
+
+## Disconnecting and Pushing a New Project to GitHub
+This section describes the steps to disconnect a modified SingleTenantBase project from source control and pushing it as a new project to GitHub.
+
+- Pull down SingleTenantBase from GitHub.
+- Modify it according to the **TODO** section above.
+- Create a new repository on GitHub with the new project name
+- Right click on the project in 'Project Explorer' -> Team -> Show in Repository View
+- Right click on the project in 'Repository View -> Delete Repository -> Only select 'Delete Git Data and History'
+- Right click on the project in 'Project Explorer' -> Team -> Disconnect
+- Right click on the project in 'Project Explorer' -> Delete -> Leave 'Delete project contents...' **unchecked** -> OK
+- Find the project in your file system -> Rename the folder to the new project name
+- File -> Import -> Grails -> Grails Project -> Find the newly renamed folder -> Finish
+- Right click on the project in 'Project Explorer' -> Team -> Share Project -> Git -> Click on the project -> Create Repository -> Finish
+- Right click on the project in 'Project Explorer' -> Team -> Commit -> Write a commit message and select all files -> Commit and Push -> Enter the new repository information -> Next -> Click 'Add All Branches' and 'Add All Tags' -> Click 'Force Update All' -> Finish
