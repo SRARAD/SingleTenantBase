@@ -62,5 +62,5 @@ This section describes the steps to disconnect a modified SingleTenantBase proje
 - Right click on the project in 'Project Explorer' -> Delete -> Leave 'Delete project contents...' **unchecked** -> OK
 - Find the project in your file system -> Rename the folder to the new project name
 - File -> Import -> Grails -> Grails Project -> Find the newly renamed folder -> Finish
-- Right click on the project in 'Project Explorer' -> Team -> Share Project -> Git -> Click on the project -> Create Repository -> Finish
+- Right click on the project in 'Project Explorer' -> Team -> Share Project -> Git -> Make sure the checkbox at the top is checked -> Click on the project -> Create Repository -> Finish
 - Right click on the project in 'Project Explorer' -> Team -> Commit -> Write a commit message and select all files -> Commit and Push -> Enter the new repository information -> Next -> Click 'Add All Branches' and 'Add All Tags' -> Click 'Force Update All' -> Finish
