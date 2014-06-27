@@ -24,6 +24,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### Views ###
 - **Index** - Modified index page with basic home controller function links
 - **RAD** - About the RAD team page
+- **Menu** - Layout containing a side menu, change the layout from **main** to **menu** to use it
 
 ### Bootstrap ###
 - **Users** - Creates a basic and admin user
