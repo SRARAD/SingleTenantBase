@@ -25,7 +25,12 @@
 		<r:layoutResources />
 	</head>
 	<body>
-	<div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+	<div id="grailsLogo" role="banner">
+		<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a>
+		<div style="float: right;">
+			<g:link controller="home" action="rad">Powered by RAD</g:link>
+		</div>
+	</div>
 		<div id="loginHeader">
 		<sec:ifLoggedIn>
 		<sec:username/>			

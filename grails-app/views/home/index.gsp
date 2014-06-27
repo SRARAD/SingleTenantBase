@@ -112,7 +112,7 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>Welcome to SRA's Grails Single Tenant Template</h1>
-			<p>This template was created by the VVC team to facilitate rapid deployment of Grails applications.</p>
+			<p>This template was created by the RAD team to facilitate rapid deployment of Grails applications.</p>
 		</div>
 	</body>
 </html>

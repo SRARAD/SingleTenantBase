@@ -6,7 +6,9 @@
 	</head>
 	<body>
 	<div id="page-body" role="main">
-		<g:render template="../layouts/radLong" />
+		<div style="padding: 10px;">
+			<g:render template="../layouts/radLong" />
+		</div>
 	</div>
 	</body>
 </html>
