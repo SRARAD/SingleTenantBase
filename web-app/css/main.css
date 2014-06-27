@@ -403,7 +403,6 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 /* TABLES */
 
 table {
-	border-top: 1px solid #DFDFDF;
 	border-collapse: collapse;
 	width: 100%;
 	margin-bottom: 1em;
@@ -411,14 +410,6 @@ table {
 
 tr {
 	border: 0;
-}
-
-tr>td:first-child, tr>th:first-child {
-	padding-left: 1.25em;
-}
-
-tr>td:last-child, tr>th:last-child {
-	padding-right: 1.25em;
 }
 
 td, th {
@@ -451,10 +442,6 @@ th a {
 
 th a:link, th a:visited {
 	color: #666666;
-}
-
-th a:hover, th a:focus {
-	color: #333333;
 }
 
 th.sortable a {
