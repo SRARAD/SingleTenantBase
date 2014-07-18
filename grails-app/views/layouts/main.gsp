@@ -25,8 +25,8 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner">
-			<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a>
+		<div id="logo" role="banner">
+			<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'RAD.png')}" alt="Rapid Application Devlopment"/></a>
 			<div style="float: right;">
 				<g:link controller="home" action="rad">Powered by SRA's RAD</g:link>
 			</div>
