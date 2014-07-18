@@ -38,6 +38,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **BlockUI** - Modal block for AJAX calls
 - **Chosen** - Select input enhancer
 - **jqPagination** - Pagination plugin
+- **Reveal** - Modal popups
 
 ### Other ###
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
