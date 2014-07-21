@@ -7,9 +7,9 @@ class User {
 	String username
 	String password
 	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean accountExpired = false
+	boolean accountLocked = false
+	boolean passwordExpired = false
 
 	static transients = ['springSecurityService']
 

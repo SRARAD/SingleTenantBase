@@ -111,6 +111,8 @@ grails.plugin.springsecurity.providerNames = [
 	'clientCredentialsAuthenticationProvider'
 ]
 
+//grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
+
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.sra.User'
@@ -125,6 +127,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll'],
 	'/logout/**':					  ['permitAll'],
+	'/saml/**':						  ['permitAll'],
 	'/searchable/**':				  ['ROLE_ADMIN'],
 	'/user/**':						  ['ROLE_ADMIN'],
 	'/role/**':						  ['ROLE_ADMIN'],

@@ -11,7 +11,7 @@ class BootStrap {
 	def searchableService
 
 	def createUser(user,pass,role) {
-		def theUser = new User(username:user,enabled:true,password:pass)
+		def theUser = new User(username:user,password:pass)
 		theUser.save(flush:true)
 		UserRole.create theUser, role, true
 		clientDetailsService.clientDetailsStore << [(user): new BaseClientDetails()]
