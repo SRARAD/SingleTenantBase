@@ -2,8 +2,8 @@ SingleTenantBase
 =========
 A base Grails 2.3.9 project for bootstrapping new projects.
 
-## Additions to base project ##
-### Plugins ###
+## Additions to base project
+### Plugins
 
 - **Searchable** - Makes domain objects searchable
 - **Executor** - Allows processes to be run in the background
@@ -11,39 +11,39 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
 - **Spring Security OAuth2** - Adds oauth
 
-### Dependencies ###
+### Dependencies
 - **AWS Java SDK** - AWS SDK for Java
 - **MySQL Java Connector** - JDBC connector for MySQL
 
-### Domain Objects ###
+### Domain Objects
 - **Spring Security** - Admin and user accounts and roles
 
-### Controllers ###
+### Controllers
 - **Home** - Basic home controller and functions
 
-### Views ###
+### Views
 - **Index** - Modified index page with basic home controller function links
 - **RAD** - About the RAD team page
 - **Menu** - Layout containing a side menu, change the layout from **main** to **menu** to use it
 
-### Bootstrap ###
+### Bootstrap
 - **Users** - Creates a basic and admin user
 - **DBBackup** - Kicks off DB backups
 
-### Services ###
+### Services
 - **DBBackup** - S3 backup service
 
-### JavaScript ###
+### JavaScript
 - **jQuery** - jQuery 2.1.0
 - **BlockUI** - Modal block for AJAX calls
 - **Chosen** - Select input enhancer
 - **jqPagination** - Pagination plugin
 - **Reveal** - Modal popups
 
-### Other ###
+### Other
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
 
-## TODO ##
+## TODO
 Things to do when first branching the base repository.
 
 - Change stem DBBackup service variable to a lowercase concise name so backup buckets don't overlap.
@@ -51,6 +51,18 @@ Things to do when first branching the base repository.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
 - Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
+
+## SSO
+To enable SSO:
+
+- Uncomment line 114 of **Config.groovy**
+- Change `appName` in line 15 of **SamelController** to some unique application name
+	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/login/auth** to login locally
+- Add an entry to **sso.sravvc.com/application** with the name created above and the final url of the form **myapp.srarad.com/saml/login**
+- If you want a session timeout
+	- Uncomment the filter in lines 12-15 of **conf/com/sra/SessionTimeoutFilters.groovy**
+	- The default timeout is 1 hour, this can be changed by changing the **3600** in the if statement to the desired number of seconds
+
 
 ## Disconnecting and Pushing a New Project to GitHub
 This section describes the steps to disconnect a modified SingleTenantBase project from source control and pushing it as a new project to GitHub.
