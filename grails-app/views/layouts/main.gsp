@@ -32,18 +32,16 @@
 			</div>
 		</div>
 		<div id="loginHeader">
-		<sec:ifLoggedIn>
-		<sec:username/>			
-		[${link(action:"index",controller:"logout"){"Logout"}}]
-		</sec:ifLoggedIn>
-		<sec:ifNotLoggedIn>
-		[${link(action:"auth",controller:"login"){"Login"}}]
-		</sec:ifNotLoggedIn>
-		</div>				
-		</div>			
+			<sec:ifLoggedIn>
+				<sec:username/>
+				[${link(action:"index",controller:"logout"){"Logout"}}]
+			</sec:ifLoggedIn>
+			<sec:ifNotLoggedIn>
+				[${link(action:"auth",controller:"login"){"Login"}}]
+			</sec:ifNotLoggedIn>
+		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 		<r:layoutResources />
 	</body>
