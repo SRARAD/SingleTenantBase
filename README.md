@@ -20,6 +20,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 ### Controllers
 - **Home** - Basic home controller and functions
+- **SAML** - SAML controller for OKTA access
 
 ### Views
 - **Index** - Modified index page with basic home controller function links
@@ -57,7 +58,7 @@ To enable SSO:
 
 - Uncomment line 114 of **Config.groovy**
 - Change `appName` in line 15 of **SamelController** to some unique application name
-	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/login/auth** to login locally
+	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/saml/local** to login locally
 - Add an entry to **sso.sravvc.com/application** with the name created above and the final url of the form **myapp.srarad.com/saml/login**
 - If you want a session timeout
 	- Uncomment the filter in lines 12-15 of **conf/com/sra/SessionTimeoutFilters.groovy**
