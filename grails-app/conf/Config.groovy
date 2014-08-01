@@ -114,10 +114,21 @@ grails.plugin.springsecurity.providerNames = [
 //grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
 
 // Added by the Spring Security Core plugin:
+//added line below to attempt to force https -- SWB
+//grails.plugin.springsecurity.auth.forceHttps = true
+//line below to tell it to use 443
+//grails.plugin.springsecurity.portMapper.httpsPort=443
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.sra.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.sra.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.sra.Role'
+//force login secure??? --SWB
+/*
+grails.plugin.springsecurity.secureChannel.definition = [
+	'/login/**': 'REQUIRES_SECURE_CHANNEL',
+	'/j_spring_security_check': 'REQUIRES_SECURE_CHANNEL'
+	]
+*/
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
