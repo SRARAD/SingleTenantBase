@@ -54,13 +54,14 @@ Things to do when first branching the base repository.
 - Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
+  - Change the static DNS name in line 81 of **grails-app/conf/Config.groovy**.
 
 ## SSO
 To enable SSO:
 
 - Uncomment line 114 of **Config.groovy**
-- Change `appName` in line 15 of **SamelController** to some unique application name
-	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/saml/local** to login locally
+- Change `appName` in line 15 of **SamlController** to some unique application name
+	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/login/auth** to login locally
 - Add an entry to **sso.sravvc.com/application** with the name created above and the final url of the form **myapp.srarad.com/saml/login**
 - If you want a session timeout
 	- Uncomment the filter in lines 12-15 of **conf/com/sra/SessionTimeoutFilters.groovy**
