@@ -78,7 +78,6 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-		grails.serverURL = 'https://stb.srarad.com/static'
     }
 }
 
