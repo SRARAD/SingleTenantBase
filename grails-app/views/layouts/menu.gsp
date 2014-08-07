@@ -7,26 +7,26 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title><g:layoutTitle default="SRA RAD"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<g:javascript src="jquery-2.1.0.js" />
-		<g:javascript src="chosen.jquery.js" />
-		<g:javascript src="jquery.blockUI.js" />
-		<!-- <g:javascript src="jquery.jqpagination.js" /> -->
-		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
+		<script src="${resource(dir: 'static/js', file: 'jquery-2.1.0.js')}"></script>
+		<script src="${resource(dir: 'static/js', file: 'chosen.jquery.js')}"></script>
+		<script src="${resource(dir: 'static/js', file: 'jquery.blockUI.js')}"></script>
+		<!-- <script src="${resource(dir: 'static/js', file: 'jquery.jqpagination.js')}"></script> -->
+		<link rel="shortcut icon" href="${resource(dir: 'static/images', file: 'favicon.ico')}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="${resource(dir: 'static/images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'chosen.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'custom.css')}" type="text/css">
-		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'jqpagination.css')}" type="text/css"> -->
+		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'main.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'mobile.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'chosen.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'custom.css')}" type="text/css">
+		<!-- <link rel="stylesheet" href="${resource(dir: 'static/css', file: 'jqpagination.css')}" type="text/css"> -->
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
 		<div id="logo" role="banner">
-			<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'RAD.png')}" alt="Rapid Application Devlopment"/></a>
+			<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'static/images', file: 'RAD.png')}" alt="Rapid Application Devlopment"/></a>
 			<div style="float: right;">
 				<g:link controller="home" action="rad">Powered by SRA's RAD</g:link>
 			</div>
