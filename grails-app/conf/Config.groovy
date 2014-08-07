@@ -99,6 +99,7 @@ log4j = {
 		}
 	}
     debug	file:	['com.sra', 'grails.app.conf'], additivity: false
+	off 'org.grails.plugin.resource.ResourceMeta'
 }
 
 grails.app.context="/"
