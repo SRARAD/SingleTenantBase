@@ -34,7 +34,7 @@
 		<div id="loginHeader">
 		<sec:ifLoggedIn>
 		<sec:username/>			
-		[${link(action:"index",controller:"logout"){"Logout"}}]
+		[${link(action:"local",controller:"saml"){"Logout"}}]
 		</sec:ifLoggedIn>
 		<sec:ifNotLoggedIn>
 		[${link(action:"auth",controller:"login"){"Login"}}]

@@ -88,6 +88,7 @@ log4j = {
 	appenders {
 		console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.INFO
 		file name: 'file', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} %p %c{2} - %m%n'), file: './ST.log', threshold: org.apache.log4j.Level.DEBUG
+		file name: 'file2', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), file: './Activity.log', threshold: org.apache.log4j.Level.INFO
     }
 	root {
 		org.apache.log4j.Level.OFF
@@ -99,6 +100,7 @@ log4j = {
 		}
 	}
     debug	file:	['com.sra', 'grails.app.conf'], additivity: false
+    info	file2:	['com.sra.LoggingFilters'], additivity: false
 	off 'org.grails.plugin.resource.ResourceMeta'
 }
 
@@ -111,7 +113,7 @@ grails.plugin.springsecurity.providerNames = [
 	'clientCredentialsAuthenticationProvider'
 ]
 
-//grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
+grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
