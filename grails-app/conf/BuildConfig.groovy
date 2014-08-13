@@ -55,6 +55,7 @@ grails.project.dependency.resolution = {
 		compile ":scaffolding:2.0.0"
 		compile ":searchable:0.6.7"
 		compile ":executor:0.3"
+		compile ":crypto:2.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
