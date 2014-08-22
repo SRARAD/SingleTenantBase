@@ -78,6 +78,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
+		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
     }
 }
 
@@ -112,8 +113,6 @@ grails.plugin.springsecurity.providerNames = [
 	'rememberMeAuthenticationProvider',
 	'clientCredentialsAuthenticationProvider'
 ]
-
-grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
