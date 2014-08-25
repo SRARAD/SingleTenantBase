@@ -5,12 +5,14 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ## Additions to base project
 ### Plugins
 
-- **Searchable** - Makes domain objects searchable
+- **Export** - adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML.
+- **Searchable** - Makes domain objects searchableand can be extended to add additional formats.
 - **Executor** - Allows processes to be run in the background
 - **Crypto** - Uses a private key to communicate authentication parameters from the RADApps server
 - **Spring Security** - Adds basic authentication to the project
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
 - **Spring Security OAuth2** - Adds oauth
+
 
 ### Dependencies
 - **AWS Java SDK** - AWS SDK for Java

@@ -26,6 +26,11 @@ grails.mime.types = [
     multipartForm: 'multipart/form-data',
     rss:           'application/rss+xml',
     text:          'text/plain',
+	csv: 			'text/csv',
+	pdf: 			'application/pdf',
+	rtf: 			'application/rtf',
+	excel: 			'application/vnd.ms-excel',
+	ods: 			'application/vnd.oasis.opendocument.spreadsheet',
     xml:           ['text/xml', 'application/xml']
 ]
 
