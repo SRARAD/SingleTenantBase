@@ -5,12 +5,14 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ## Additions to base project
 ### Plugins
 
-- **Searchable** - Makes domain objects searchable
+- **Export** - adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML.
+- **Searchable** - Makes domain objects searchableand can be extended to add additional formats.
 - **Executor** - Allows processes to be run in the background
 - **Crypto** - Uses a private key to communicate authentication parameters from the RADApps server
 - **Spring Security** - Adds basic authentication to the project
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
 - **Spring Security OAuth2** - Adds oauth
+
 
 ### Dependencies
 - **AWS Java SDK** - AWS SDK for Java
@@ -60,7 +62,6 @@ Things to do when first branching the base repository.
 ## SSO
 To enable SSO:
 
-- Uncomment line 114 of **Config.groovy**
 - Change `appName` in line 15 of **SamlController** to some unique application name
 	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/login/auth** to login locally
 - Add an entry to **sso.sravvc.com/application** with the name created above and the final url of the form **myapp.srarad.com/saml/login**

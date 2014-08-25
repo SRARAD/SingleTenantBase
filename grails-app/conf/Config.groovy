@@ -26,6 +26,11 @@ grails.mime.types = [
     multipartForm: 'multipart/form-data',
     rss:           'application/rss+xml',
     text:          'text/plain',
+	csv: 			'text/csv',
+	pdf: 			'application/pdf',
+	rtf: 			'application/rtf',
+	excel: 			'application/vnd.ms-excel',
+	ods: 			'application/vnd.oasis.opendocument.spreadsheet',
     xml:           ['text/xml', 'application/xml']
 ]
 
@@ -78,6 +83,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
+		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
     }
 }
 
@@ -112,8 +118,6 @@ grails.plugin.springsecurity.providerNames = [
 	'rememberMeAuthenticationProvider',
 	'clientCredentialsAuthenticationProvider'
 ]
-
-grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
