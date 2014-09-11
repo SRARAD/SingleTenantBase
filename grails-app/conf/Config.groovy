@@ -63,7 +63,6 @@ grails.exceptionresolver.params.exclude = ['password']
 
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
-grails.serverURL = "https://stb.srarad.com"
 grails {
 	mail {
 		host='email-smtp.us-east-1.amazonaws.com'
@@ -84,6 +83,7 @@ environments {
     production {
         grails.logging.jul.usebridge = false
 		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
+		grails.serverURL = "https://stb.srarad.com"
     }
 }
 

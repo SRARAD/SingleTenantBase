@@ -55,9 +55,11 @@ Things to do when first branching the base repository.
 - Refactor home controller and services to new package name.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
+- Search all files for stb.srarad.com and change to the new app URL.
 - Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
+  - Change the server name in line 39.
 
 ## SSO
 To enable SSO:
