@@ -5,3 +5,5 @@
 /.project
 /target
 /*.log
+/web-app/.ebextensions/ssl.config
+/web-app/extra/rad.txt
