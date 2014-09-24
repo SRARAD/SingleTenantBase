@@ -124,6 +124,7 @@ grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.sra.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.sra.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.sra.Role'
+grails.plugin.springsecurity.oauthProvider.active = true
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],

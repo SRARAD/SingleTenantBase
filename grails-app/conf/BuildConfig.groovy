@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
         compile ":hibernate:3.6.10.15"
         runtime ":resources:1.2"
 		compile ":quartz:1.0.1"
-		compile ":scaffolding:2.0.0"
+		compile ":scaffolding:2.0.3"
 		compile ":searchable:0.6.7"
 		compile ":executor:0.3"
 		compile ":crypto:2.0"
@@ -63,7 +63,7 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.5"
 
         build ':tomcat:7.0.52.1'
-        runtime ":database-migration:1.3.2"
+        runtime ":database-migration:1.4.0"
         compile ':cache:1.1.1'
 		compile ":spring-security-ui:1.0-RC1"
 		compile ":spring-security-core:2.0-RC2"
