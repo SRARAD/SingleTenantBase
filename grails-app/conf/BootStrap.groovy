@@ -1,4 +1,3 @@
-import com.sra.DBBackupService
 import com.sra.Role
 import com.sra.User
 import com.sra.UserRole
@@ -9,6 +8,7 @@ class BootStrap {
 	def springSecurityService
 	def clientDetailsService
 	def searchableService
+	def DBBackupService
 
 	def createUser(user,pass,role) {
 		def theUser = new User(username:user,password:pass)
@@ -32,8 +32,7 @@ class BootStrap {
 			log.error(e.toString())
 			e.printStackTrace()
 		}
-		def backup = new DBBackupService()
-		backup.registerListener()
+		DBBackupService.registerListener()
 	}
 	def destroy = {
 		

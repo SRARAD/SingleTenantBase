@@ -69,5 +69,6 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-oauth2-provider:1.0.5.2"
 		compile ":export:1.6"
 		compile ":srasaml:0.1"
+		compile ":db-backups:0.1"
     }
 }
