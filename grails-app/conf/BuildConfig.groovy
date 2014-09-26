@@ -46,6 +46,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 		runtime "com.amazonaws:aws-java-sdk:1.7.3"
         runtime 'mysql:mysql-connector-java:5.1.22'
+		
     }
 
     plugins {
@@ -69,5 +70,58 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-core:2.0-RC4"
 		compile ":spring-security-oauth2-provider:1.0.5.2"
 		compile ":export:1.6"
+		compile ":codenarc:0.21"
+		
     }
 }
+codenarc.reports = {
+	// Each report definition is of the form:
+	//    REPORT-NAME(REPORT-TYPE) {
+	//        PROPERTY-NAME = PROPERTY-VALUE
+	//        PROPERTY-NAME = PROPERTY-VALUE
+	//    }
+	
+    // uncomment this section if you want to generate xml report  
+	/*MyXmlReport('xml') {                    // The report name "MyXmlReport" is user-defined; Report type is 'xml'
+		outputFile = 'target/CodeNarc-Report.xml'  // Set the 'outputFile' property of the (XML) Report
+		title = 'SingleTenantBase XML Report'             // Set the 'title' property of the (XML) Report
+	}*/
+	
+	MyHtmlReport('html') {                  // Report type is 'html'
+		outputFile = 'target/CodeNarc-Report.html'
+		title = 'SingleTenantBase html Report'
+	}
+}
+codenarc.ruleSetFiles="file:grails-app/conf/CodeNarcRules.groovy"
+//example of configuring the Codenarc properties
+codenarc.properties = {
+	// Each property definition is of the form:  RULE.PROPERTY-NAME = PROPERTY-VALUE
+	GrailsPublicControllerMethod.enabled = false
+	EmptyIfStatement.priority = 1
+}
+//set the maximum number of priority X violations allowed without causing a failure.
+codenarc.maxPriority1Violations = 50
+codenarc.maxPriority2Violations = 100
+codenarc.maxPriority3Violations = 200
+
+//controls what happens when the maximum number of violations are exceeded
+codenarc.systemExitOnBuildException = true
+
+
+
+
+
+/*
+codenarc{
+	ruleSetFiles = "file:grails-app/conf/CodeNarcRules.groovy" // Ruleset file path
+	//maxPriority2Violations = 1
+	//systemExitOnBuildException = true
+	
+	reports = {
+	  HtmlReport('html') {    // Report type is 'html'
+		outputFile = 'target/CodeNarcReport.html' //Output file name
+		title = 'SingleTenantBase Code Narc Report' // Title of the file
+	  }
+	}
+}
+*/
