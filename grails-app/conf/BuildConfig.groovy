@@ -11,6 +11,10 @@ grails.project.source.level = 1.6
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
+def config = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File("../UserConfig.groovy").toURI().toURL())
+
+grails.project.dependency.resolver = "maven"
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -31,6 +35,13 @@ grails.project.dependency.resolution = {
         mavenLocal()
         mavenCentral()
 		
+		mavenRepo('http://artifactory.srarad.com:8080/artifactory/SRA') {
+             auth([
+                realm: "Artifactory Realm",
+                username: config.artifactory.username,
+                password: config.artifactory.password
+            ])
+        }
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
 		mavenRepo "http://repo.grails.org/grails/core"
