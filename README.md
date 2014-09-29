@@ -5,7 +5,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ## Additions to base project
 
 ### Plugins
-
+- **CodeNarc** - Generates static code analysis for Groovy code that can be viewed as html report or within jenkins violation   plugin
 - **Export** - Adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML
 - **Searchable** - Makes domain objects searchableand can be extended to add additional formats
 - **Executor** - Allows processes to be run in the background
@@ -56,6 +56,22 @@ Things to do when first branching the base repository.
 - Search all files for SingleTenantBase and change to new app name.
 - Search all files for stb.srarad.com and change to the new app URL.
 - Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
+- Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reprots using codenarc.reports property as follows
+
+```
+codenarc.reports = {
+    // generate xml report
+	MyXmlReport('xml') {                    
+		outputFile = 'target/CodeNarcReport.xml'  // Set the 'outputFile' property of the (XML) Report
+		title = 'SingleTenantBase XML Report'             // Set the 'title' property of the (XML) Report
+	}
+	// generate html report
+		MyHtmlReport('html') {                  
+		outputFile = 'target/CodeNarcReport.html'
+		title = 'SingleTenantBase html Report'
+	}
+} 
+```
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
   - Change the server name in line 39.
