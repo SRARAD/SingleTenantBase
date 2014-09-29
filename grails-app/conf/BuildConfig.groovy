@@ -82,13 +82,13 @@ codenarc.reports = {
 	//    }
 	
     // uncomment this section if you want to generate xml report  
-	/*MyXmlReport('xml') {                    // The report name "MyXmlReport" is user-defined; Report type is 'xml'
-		outputFile = 'target/CodeNarc-Report.xml'  // Set the 'outputFile' property of the (XML) Report
+	MyXmlReport('xml') {                    // The report name "MyXmlReport" is user-defined; Report type is 'xml'
+		outputFile = 'target/CodeNarcReport.xml'  // Set the 'outputFile' property of the (XML) Report
 		title = 'SingleTenantBase XML Report'             // Set the 'title' property of the (XML) Report
-	}*/
+	}
 	
 	MyHtmlReport('html') {                  // Report type is 'html'
-		outputFile = 'target/CodeNarc-Report.html'
+		outputFile = 'target/CodeNarcReport.html'
 		title = 'SingleTenantBase html Report'
 	}
 }
