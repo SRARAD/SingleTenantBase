@@ -87,6 +87,7 @@ codenarc.reports = {
 		title = 'SingleTenantBase XML Report'             // Set the 'title' property of the (XML) Report
 	}
 	
+	
 	MyHtmlReport('html') {                  // Report type is 'html'
 		outputFile = 'target/CodeNarcReport.html'
 		title = 'SingleTenantBase html Report'
