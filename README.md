@@ -3,15 +3,20 @@ SingleTenantBase
 A base Grails 2.3.9 project for bootstrapping new projects.
 
 ## Additions to base project
+
 ### Plugins
 
-- **Export** - adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML.
-- **Searchable** - Makes domain objects searchableand can be extended to add additional formats.
+- **Export** - Adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML
+- **Searchable** - Makes domain objects searchableand can be extended to add additional formats
 - **Executor** - Allows processes to be run in the background
-- **Crypto** - Uses a private key to communicate authentication parameters from the RADApps server
 - **Spring Security** - Adds basic authentication to the project
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
 - **Spring Security OAuth2** - Adds oauth
+
+#### SRA Plugins
+
+- **SRA SAML** - Okta authentication for sattelite applications
+- **DB Backup** - Automatic H2 backups to S3
 
 
 ### Dependencies
@@ -23,7 +28,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 ### Controllers
 - **Home** - Basic home controller and functions
-- **SAML** - SAML controller for OKTA access
 
 ### Views
 - **Index** - Modified index page with basic home controller function links
@@ -32,10 +36,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 ### Bootstrap
 - **Users** - Creates a basic and admin user
-- **DBBackup** - Kicks off DB backups
-
-### Services
-- **DBBackup** - S3 backup service
 
 ### JavaScript
 - **jQuery** - jQuery 2.1.0
@@ -51,7 +51,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ## TODO
 Things to do when first branching the base repository.
 
-- Change stem DBBackup service variable to a lowercase concise name so backup buckets don't overlap.
 - Refactor home controller and services to new package name.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
@@ -62,14 +61,7 @@ Things to do when first branching the base repository.
   - Change the server name in line 39.
 
 ## SSO
-To enable SSO:
-
-- Change `appName` in line 15 of **SamlController** to some unique application name
-	- **NOTE:** If you need to test SSO locally use **localhost** as the app name and test using **127.0.0.1:8080**, otherwise access **localhost:8080/login/auth** to login locally
-- Add an entry to **sso.sravvc.com/application** with the name created above and the final url of the form **myapp.srarad.com/saml/login**
-- If you want a session timeout
-	- Uncomment the filter in lines 12-15 of **conf/com/sra/SessionTimeoutFilters.groovy**
-	- The default timeout is 1 hour, this can be changed by changing the **3600** in the if statement to the desired number of seconds
+To enable SSO follow the instructions in the **SRA SAML Plugin** readme.
 
 
 ## Disconnecting and Pushing a New Project to GitHub
