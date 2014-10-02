@@ -11,8 +11,6 @@ grails.project.source.level = 1.6
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
-def config = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File("../UserConfig.groovy").toURI().toURL())
-
 grails.project.dependency.resolver = "maven"
 
 grails.project.dependency.resolution = {
@@ -27,6 +25,9 @@ grails.project.dependency.resolution = {
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
+		// Set possible config locations
+		def loc = ['../UserConfig.groovy', 'webapps/ROOT/Jenkins.groovy'].grep { new File(it).exists() }.first();
+		def config = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File(loc).toURI().toURL())
 
         grailsPlugins()
         grailsHome()
