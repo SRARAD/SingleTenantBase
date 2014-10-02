@@ -115,10 +115,10 @@ codenarc.properties = {
 //set the maximum number of priority X violations allowed without causing a failure.
 codenarc.maxPriority1Violations = 50
 codenarc.maxPriority2Violations = 100
-codenarc.maxPriority3Violations = 200
+codenarc.maxPriority3Violations = 100
 
 //controls what happens when the maximum number of violations are exceeded
-codenarc.systemExitOnBuildException = true
+codenarc.systemExitOnBuildException = false
 
 
 
