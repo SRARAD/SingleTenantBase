@@ -55,7 +55,8 @@ Things to do when first branching the base repository.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
 - Search all files for stb.srarad.com and change to the new app URL.
-- Add static searchable  = { mapping { spellCheck "include" } } to searchable domain objects.
+- Add `static searchable  = { mapping { spellCheck "include" } }` to searchable domain objects.
+- Edit the configs under **SRA Plugins** in **Config.groovy**
 - Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reprots using codenarc.reports property as follows
 
 ```
