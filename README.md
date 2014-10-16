@@ -76,6 +76,7 @@ codenarc.reports = {
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
   - Change the server name in line 39.
+  - Change production database url value in DataSource.groovy from prodDb to something else
 
 ## SSO
 To enable SSO follow the instructions in the **SRA SAML Plugin** readme.
