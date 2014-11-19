@@ -47,6 +47,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### Other
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
 - **Activity Logging** - All actions are recorded in **Activity.log** in the root directory with the date, username, controller, and action
+- **Version Bump** - Shell script which bumps the app version, merges the dev branch into master, and tags the release
 
 ## TODO
 Things to do when first branching the base repository.

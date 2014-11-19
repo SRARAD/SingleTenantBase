@@ -120,10 +120,8 @@ grails.plugin.springsecurity.providerNames = [
 ]
 
 // SRA Plugins
-
 grails.plugin.dbbackups.stem = 'sample'
 grails.plugin.srasaml.appName = 'Single Tenant Base'
-
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false

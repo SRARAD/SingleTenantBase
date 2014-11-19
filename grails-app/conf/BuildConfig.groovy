@@ -37,11 +37,11 @@ grails.project.dependency.resolution = {
         mavenCentral()
 		
 		mavenRepo('http://artifactory.srarad.com:8080/artifactory/SRA') {
-             auth([
-                realm: "Artifactory Realm",
-                username: config.artifactory.username,
-                password: config.artifactory.password
-            ])
+			auth([
+				realm: "Artifactory Realm",
+				username: config.artifactory.username,
+				password: config.artifactory.password
+			])
         }
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
