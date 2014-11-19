@@ -23,4 +23,4 @@ git tag -a $1 -m $2
 echo ""
 git checkout dev
 echo -e "\nSUCCESS"
-echo "Run 'git push --all' after confirming the changes."
+echo "Run 'git push --all' and 'git push --tags' after confirming the changes."
