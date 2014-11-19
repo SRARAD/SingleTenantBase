@@ -41,7 +41,9 @@
 			</sec:ifNotLoggedIn>
 		</div>
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
+		<div class="footer" role="contentinfo" style="text-align: right;">
+			<b>Version ${ grailsApplication.metadata['app.version'] }</b>
+		</div>
 		<g:javascript library="application"/>
 		<r:layoutResources />
 	</body>
