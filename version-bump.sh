@@ -13,7 +13,7 @@ sed "s/app.version=.*/app.version=$1/g" < application.properties.temp > applicat
 rm -f application.properties.temp
 echo ""
 git add application.properties
-git commit -m "Version bump."
+git commit -m "Version bump to v$1."
 echo ""
 git checkout master
 echo ""
