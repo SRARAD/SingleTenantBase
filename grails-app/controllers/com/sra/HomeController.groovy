@@ -9,6 +9,10 @@ class HomeController {
 	
 	def rad() { }
 	
+	def health() {
+		render(status: 200)
+	}
+	
 	def changePassword () {
 		render(view:"chpass")
 	}
