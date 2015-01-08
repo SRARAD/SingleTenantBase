@@ -10,8 +10,8 @@ class BootStrap {
 	def searchableService
 	def DBBackupService
 
-	def createUser(user,pass,role) {
-		def theUser = new User(username:user,password:pass)
+	def createUser(user,pass,role,email) {
+		def theUser = new User(username:user,password:pass,email:email)
 		theUser.save(flush:true)
 		UserRole.create theUser, role, true
 		clientDetailsService.clientDetailsStore << [(user): new BaseClientDetails()]
@@ -25,8 +25,8 @@ class BootStrap {
 				def adminRole = new Role(authority:'ROLE_ADMIN').save(flush:true)
 				def userRole = new Role(authority:'ROLE_USER').save(flush:true)
 	
-				createUser('admin','stbadmin2014',adminRole)
-				createUser('user','stbuser2014',userRole)
+				createUser('admin','stbadmin2014',adminRole,'rad@sra.com')
+				createUser('user','stbuser2014',userRole,'rad@sra.com')
 			}
 		} catch (Exception e) {
 			log.error(e.toString())
