@@ -22,6 +22,13 @@ class User {
 	static mapping = {
 		password column: '`password`'
 	}
+	
+	User(String _username, String _password, _springSecurityService) {
+		username = _username;
+		password = _password;
+		email = _username.split(' ').join('_') + '@sra.com';
+		springSecurityService = _springSecurityService;
+	}
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this).collect { it.role } as Set
