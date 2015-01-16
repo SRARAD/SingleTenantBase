@@ -48,6 +48,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### Other
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
 - **Activity Logging** - All actions are recorded in **Activity.log** in the root directory with the date, username, controller, and action
+- **Version Bump** - Shell script which bumps the app version, merges the dev branch into master, and tags the release
 
 ## TODO
 Things to do when first branching the base repository.
@@ -77,6 +78,7 @@ codenarc.reports = {
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
   - Change the server name in line 39.
+  - Change production database url value in DataSource.groovy from prodDb to something else
 
 ## SSO
 To enable SSO follow the instructions in the **SRA SAML Plugin** readme.

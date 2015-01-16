@@ -37,11 +37,11 @@ grails.project.dependency.resolution = {
         mavenCentral()
 		
 		mavenRepo('http://artifactory.srarad.com:8080/artifactory/SRA') {
-             auth([
-                realm: "Artifactory Realm",
-                username: config.artifactory.username,
-                password: config.artifactory.password
-            ])
+			auth([
+				realm: "Artifactory Realm",
+				username: config.artifactory.username,
+				password: config.artifactory.password
+			])
         }
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
@@ -76,15 +76,14 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.5"
 
         build ':tomcat:7.0.54'
-        runtime ":database-migration:1.4.0"
         compile ':cache:1.1.1'
 		compile ":spring-security-ui:1.0-RC2"
 		compile ":spring-security-core:2.0-RC4"
 		compile ":spring-security-oauth2-provider:1.0.5.2"
 		compile ":export:1.6"
 		compile ":codenarc:0.21"
-		compile ":srasaml:0.1"
-		compile ":db-backups:0.1"
+		compile ":srasaml:0.3.3"
+		compile ":db-backups:0.2"
     }
 }
 codenarc.reports = {

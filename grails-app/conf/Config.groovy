@@ -120,10 +120,8 @@ grails.plugin.springsecurity.providerNames = [
 ]
 
 // SRA Plugins
-
 grails.plugin.dbbackups.stem = 'sample'
 grails.plugin.srasaml.appName = 'Single Tenant Base'
-
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
@@ -133,20 +131,12 @@ grails.plugin.springsecurity.authority.className = 'com.sra.Role'
 grails.plugin.springsecurity.oauthProvider.active = true
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
-	'/index.gsp':                     ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll'],
-	'/logout/**':					  ['permitAll'],
-	'/saml/**':						  ['permitAll'],
-	'/searchable/**':				  ['ROLE_ADMIN'],
-	'/user/**':						  ['ROLE_ADMIN'],
-	'/role/**':						  ['ROLE_ADMIN'],
-	'/registrationCode/**':			  ['ROLE_ADMIN'],
-	'/securityInfo/**':				  ['ROLE_ADMIN'],
-	'/oauth/authorize.dispatch':	  ['IS_AUTHENTICATED_REMEMBERED'],
-    '/oauth/token.dispatch':		  ['IS_AUTHENTICATED_REMEMBERED']
+	'/**':								['permitAll'],
+	'/searchable/**':					['ROLE_ADMIN'],
+	'/user/**':							['ROLE_ADMIN'],
+	'/role/**':							['ROLE_ADMIN'],
+	'/registrationCode/**':				['ROLE_ADMIN'],
+	'/securityInfo/**':					['ROLE_ADMIN'],
+	'/oauth/authorize.dispatch':		['IS_AUTHENTICATED_REMEMBERED'],
+    '/oauth/token.dispatch':			['IS_AUTHENTICATED_REMEMBERED']
 ]
