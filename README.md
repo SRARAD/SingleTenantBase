@@ -19,7 +19,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **SRA SAML** - Okta authentication for sattelite applications
 - **DB Backup** - Automatic H2 backups to S3
 
-
 ### Dependencies
 - **AWS Java SDK** - AWS SDK for Java
 - **MySQL Java Connector** - JDBC connector for MySQL
@@ -33,7 +32,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### Views
 - **Index** - Modified index page with basic home controller function links
 - **RAD** - About the RAD team page
-- **Menu** - Layout containing a side menu, change the layout from **main** to **menu** to use it
 
 ### Bootstrap
 - **Users** - Creates a basic and admin user
@@ -46,6 +44,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **Reveal** - Modal popups
 
 ### Other
+- **Semantic UI** - Styling framework
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
 - **Activity Logging** - All actions are recorded in **Activity.log** in the root directory with the date, username, controller, and action
 - **Version Bump** - Shell script which bumps the app version, merges the dev branch into master, and tags the release
