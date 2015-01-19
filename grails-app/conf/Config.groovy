@@ -80,10 +80,17 @@ environments {
     development {
         grails.logging.jul.usebridge = true
     }
+    devdeploy {
+        grails.logging.jul.usebridge = false
+		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
+		grails.serverURL = "https://stb-dev.srarad.com"
+		grails.plugin.srasaml.appName = 'Single Tenant Base Dev'
+    }
     production {
         grails.logging.jul.usebridge = false
 		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
 		grails.serverURL = "https://stb.srarad.com"
+		grails.plugin.srasaml.appName = 'Single Tenant Base'
     }
 }
 
@@ -121,7 +128,6 @@ grails.plugin.springsecurity.providerNames = [
 
 // SRA Plugins
 grails.plugin.dbbackups.stem = 'sample'
-grails.plugin.srasaml.appName = 'Single Tenant Base'
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.logout.postOnly = false
