@@ -1,7 +1,6 @@
 import com.sra.Role
 import com.sra.User
 import com.sra.UserRole
-import org.springframework.security.oauth2.provider.BaseClientDetails
 
 class BootStrap {
 
@@ -14,7 +13,6 @@ class BootStrap {
 		def theUser = new User(username:user,password:pass,email:email)
 		theUser.save(flush:true)
 		UserRole.create theUser, role, true
-		clientDetailsService.clientDetailsStore << [(user): new BaseClientDetails()]
 	}
 
 	def init = { servletContext ->

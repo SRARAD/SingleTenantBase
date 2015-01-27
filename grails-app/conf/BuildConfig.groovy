@@ -79,7 +79,6 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.1'
 		compile ":spring-security-ui:1.0-RC2"
 		compile ":spring-security-core:2.0-RC4"
-		compile ":spring-security-oauth2-provider:1.0.5.2"
 		compile ":export:1.6"
 		compile ":codenarc:0.21"
 		compile ":srasaml:0.3.3"
