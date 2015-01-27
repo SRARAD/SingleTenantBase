@@ -89,7 +89,11 @@
 		<r:layoutResources />
 		<script>
 			var activeMenu = function(id) {
-				$('.menu-' + id).addClass('active');
+				if ($('.menu-' + id).is('a')) {
+					$('.menu-' + id).addClass('active');
+				} else {
+					$('.menu-' + id).addClass('selected');
+				}
 			};
 			var flag=false;
 			var tab = 'tab0'
