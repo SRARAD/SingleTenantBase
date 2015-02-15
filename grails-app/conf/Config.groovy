@@ -76,6 +76,8 @@ grails {
 	}
 }
 
+rad.about.url = 'https://srarad.com/home/radText'
+
 environments {
     development {
         grails.logging.jul.usebridge = true

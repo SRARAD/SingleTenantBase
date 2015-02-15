@@ -7,7 +7,9 @@ class HomeController {
 
 	def index() { }
 	
-	def rad() { }
+	def rad() {
+		[md: grailsApplication.config.rad.about.url.toURL().text]
+	}
 	
 	def health() {
 		render(status: 200)
