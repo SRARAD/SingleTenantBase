@@ -101,7 +101,7 @@ log4j = {
     // Example of changing the log pattern for the default console appender:
     //
 	appenders {
-		console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.WARN
+		console name:'stdout', layout:pattern(conversionPattern: '%p %c{2} %m%n'), threshold: org.apache.log4j.Level.WARN
 		file name: 'debug', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} %p %c{2} - %m%n'), file: 'debug.log', threshold: org.apache.log4j.Level.DEBUG
 		file name: 'activity', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), file: 'activity.log', threshold: org.apache.log4j.Level.INFO
     }
