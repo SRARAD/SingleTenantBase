@@ -101,9 +101,9 @@ log4j = {
     // Example of changing the log pattern for the default console appender:
     //
 	appenders {
-		console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.INFO
-		file name: 'file', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} %p %c{2} - %m%n'), file: './ST.log', threshold: org.apache.log4j.Level.DEBUG
-		file name: 'file2', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), file: './Activity.log', threshold: org.apache.log4j.Level.INFO
+		console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.WARN
+		file name: 'debug', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} %p %c{2} - %m%n'), file: 'debug.log', threshold: org.apache.log4j.Level.DEBUG
+		file name: 'activity', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), file: 'activity.log', threshold: org.apache.log4j.Level.INFO
     }
 	root {
 		org.apache.log4j.Level.OFF
@@ -111,11 +111,25 @@ log4j = {
 	
 	environments {
 		development {
-			info	stdout:	['com.sra', 'grails.app.conf'], additivity: false
+			warn	stdout:	[
+				'grails.app.controllers.com.sra',
+				'grails.app.domain.com.sra',
+				'grails.app.services.com.sra',
+				'grails.app.taglib.com.sra',
+				'grails.app.conf.com.sra',
+				'grails.app.filters.com.sra'
+			], additivity: false
 		}
 	}
-    debug	file:	['com.sra', 'grails.app.conf'], additivity: false
-    info	file2:	['com.sra.LoggingFilters'], additivity: false
+    debug	debug:	[
+		'grails.app.controllers.com.sra',
+		'grails.app.domain.com.sra',
+		'grails.app.services.com.sra',
+		'grails.app.taglib.com.sra',
+		'grails.app.conf.com.sra',
+		'grails.app.filters.com.sra'
+	], additivity: false
+    info	activity:	['grails.app.filters.com.sra.LoggingFilters'], additivity: false
 	off 'org.grails.plugin.resource.ResourceMeta'
 }
 
