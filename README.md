@@ -43,11 +43,17 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **jqPagination** - Pagination plugin
 - **Reveal** - Modal popups
 
+### Logging
+
+Log4j has been setup for the project to listen to all **com.sra** logging output.
+
+- **WARN** and above gets output to the console in the **dev** environment
+- **DEBUG** and above gets logged to **debug.log** in all environments
+- All page requests are recorded in **activity.log** in the root directory with the date, username, controller, and action
+
 ### Other
 - **Semantic UI** - Styling framework
 - **MySQL DB Config** - Commented out DataSource config for MySQL connections
-- **Activity Logging** - All actions are recorded in **Activity.log** in the root directory with the date, username, controller, and action
-- **Version Bump** - Shell script which bumps the app version, merges the dev branch into master, and tags the release
 
 ## TODO
 Things to do when first branching the base repository.
@@ -63,16 +69,16 @@ Things to do when first branching the base repository.
 ```
 codenarc.reports = {
     // generate xml report
-	MyXmlReport('xml') {                    
+	MyXmlReport('xml') {
 		outputFile = 'target/CodeNarcReport.xml'  // Set the 'outputFile' property of the (XML) Report
 		title = 'SingleTenantBase XML Report'             // Set the 'title' property of the (XML) Report
 	}
 	// generate html report
-		MyHtmlReport('html') {                  
+		MyHtmlReport('html') {
 		outputFile = 'target/CodeNarcReport.html'
 		title = 'SingleTenantBase html Report'
 	}
-} 
+}
 ```
 - **SSL**
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
