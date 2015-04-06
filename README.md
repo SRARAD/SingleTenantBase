@@ -62,7 +62,6 @@ Things to do when first branching the base repository.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
 - Search all files for stb.srarad.com and change to the new app URL.
-- Add `static searchable  = { mapping { spellCheck "include" } }` to searchable domain objects.
 - Edit the configs under **SRA Plugins** in **Config.groovy**
 - Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reprots using codenarc.reports property as follows
 
@@ -84,6 +83,15 @@ codenarc.reports = {
   - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
   - Change the server name in line 39.
   - Change production database url value in DataSource.groovy from prodDb to something else
+
+### Searchable
+
+The **Searchable** plugin is a powerful way to perform free text search on domain objects. Below are instructions to configure STB for search:
+
+- Add `static searchable  = { mapping { spellCheck "include" } }` to searchable domain objects.
+- Overwrite the default `toString()` method on searchable domain objects, this will be the title of the element when returned by a search query
+	- **Make sure that any fields and objects used in the `toString()` method are also searchable otherwise they will not be included in the Searchable index**
+- Add a `Collection<String> highlight()` method to the searchable domain objects which returnes a collection of all fields you want highlighted if they contain the search term (e.g. name, description)
 
 ## SSO
 To enable SSO follow the instructions in the **SRA SAML Plugin** readme.
