@@ -52,14 +52,22 @@
 						</div>
 					</sec:ifAllGranted>
 					<div class="right menu">
-						<div class="ui dropdown item">
-							<i class="icon dropdown"></i> <sec:username/>
-							<div class="menu">
-								<a class="item" href="/home/changePassword">Change Your Password</a>
-								<g:link class="item" controller="logout">
-									<i class="icon sign out"></i> Logout
-								</g:link>
+						<g:if test="${ grailsApplication.config.grails.plugin.srasaml.appName }">
+							<div class="ui item">
+								<sec:username/>
 							</div>
+						</g:if>
+						<g:else>
+							<div class="ui dropdown item">
+								<i class="icon dropdown"></i> <sec:username/>
+								<div class="menu">
+									<a class="item" href="/home/changePassword">Change Your Password</a>
+									<g:link class="item" controller="logout">
+										<i class="icon sign out"></i> Logout
+									</g:link>
+								</div>
+							</div>
+						</g:else>
 						</div>
 					</div>
 				</div>
