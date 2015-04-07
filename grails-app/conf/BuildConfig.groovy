@@ -82,7 +82,7 @@ grails.project.dependency.resolution = {
 		compile ":export:1.6"
 		compile ":codenarc:0.21"
 		compile ":srasaml:0.3.3"
-		compile ":db-backups:0.2"
+		compile ":db-backups:0.3"
     }
 }
 codenarc.reports = {

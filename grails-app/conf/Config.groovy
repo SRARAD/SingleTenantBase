@@ -81,6 +81,7 @@ rad.about.url = 'https://srarad.com/home/radText'
 environments {
     development {
         grails.logging.jul.usebridge = true
+		grails.plugin.dbbackups.s3Backups = false
     }
     devdeploy {
         grails.logging.jul.usebridge = false
