@@ -5,13 +5,12 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
-	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Legal Tracker"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="${resource(dir: 'static/js', file: 'jquery-2.1.0.js')}"></script>	
-		<script src="${resource(dir: 'static/semantic', file: 'semantic.min.js')}"></script>	
+		<script src="${resource(dir: 'static/js', file: 'jquery-2.1.0.js')}"></script>
+		<script src="${resource(dir: 'static/semantic', file: 'semantic.min.js')}"></script>
 		<script src="${resource(dir: 'static/js', file: 'jquery.blockUI.js')}"></script>
 		<link rel="stylesheet" href="${resource(dir: 'static/semantic', file: 'semantic.min.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'custom.css')}" type="text/css">
@@ -68,7 +67,6 @@
 								</div>
 							</div>
 						</g:else>
-						</div>
 					</div>
 				</div>
 			</sec:ifLoggedIn>
