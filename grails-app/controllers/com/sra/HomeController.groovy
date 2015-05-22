@@ -7,10 +7,6 @@ class HomeController {
 
 	def index() { }
 	
-	def rad() {
-		[md: grailsApplication.config.rad.about.url.toURL().text]
-	}
-	
 	def health() {
 		render(status: 200)
 	}
@@ -58,12 +54,5 @@ class HomeController {
 	 
 		redirect controller: 'home'
 	 }
-	
-	@Secured("ROLE_ADMIN")
-	def dbbackup() {
-		DBBackupService.s3Backup()
-		flash.message = "Database has been backed up to S3"
-		redirect(controller: "home", action: "index")
-	}
 }
 

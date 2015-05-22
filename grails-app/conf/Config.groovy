@@ -63,37 +63,16 @@ grails.exceptionresolver.params.exclude = ['password']
 
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
-grails {
-	mail {
-		host='email-smtp.us-east-1.amazonaws.com'
-		port=465
-		props = [
-			'mail.smtp.auth': 'true',
-			'mail.smtp.socketFactory.port':'465',
-			"mail.smtp.socketFactory.class": "javax.net.ssl.SSLSocketFactory",
-			"mail.smtp.socketFactory.fallback": "false"
-		]
-	}
-}
-
-rad.about.url = 'https://srarad.com/home/radText'
 
 environments {
     development {
         grails.logging.jul.usebridge = true
-		grails.plugin.dbbackups.s3Backups = false
     }
     devdeploy {
         grails.logging.jul.usebridge = false
-		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
-		grails.serverURL = "https://stb-dev.srarad.com"
-		grails.plugin.srasaml.appName = 'Single Tenant Base Dev'
     }
     production {
         grails.logging.jul.usebridge = false
-		grails.plugin.springsecurity.auth.loginFormUrl = '/saml/auth'
-		grails.serverURL = "https://stb.srarad.com"
-		grails.plugin.srasaml.appName = 'Single Tenant Base'
     }
 }
 

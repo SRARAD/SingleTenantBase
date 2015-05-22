@@ -44,29 +44,21 @@
 							<i class="icon setting"></i>
 							Admin Actions<i class="icon dropdown"></i>
 							<div class="menu">
-								<a class="item" href="/home/dbbackup">Force Backup</a>
 								<g:link class="item" controller="user">Edit Users</g:link>
 							   <a class="item" href="/controllers">Internal Controllers</a>
 							</div>
 						</div>
 					</sec:ifAllGranted>
 					<div class="right menu">
-						<g:if test="${ grailsApplication.config.grails.plugin.srasaml.appName }">
-							<div class="ui item">
-								<sec:username/>
+						<div class="ui dropdown item">
+							<i class="icon dropdown"></i> <sec:username/>
+							<div class="menu">
+								<a class="item" href="/home/changePassword">Change Your Password</a>
+								<g:link class="item" controller="logout">
+									<i class="icon sign out"></i> Logout
+								</g:link>
 							</div>
-						</g:if>
-						<g:else>
-							<div class="ui dropdown item">
-								<i class="icon dropdown"></i> <sec:username/>
-								<div class="menu">
-									<a class="item" href="/home/changePassword">Change Your Password</a>
-									<g:link class="item" controller="logout">
-										<i class="icon sign out"></i> Logout
-									</g:link>
-								</div>
-							</div>
-						</g:else>
+						</div>
 					</div>
 				</div>
 			</sec:ifLoggedIn>
@@ -78,16 +70,7 @@
 		
 		<div class="menu-wrapper">
 			<div class="ui segment" style="margin-bottom: 15px;">
-				<div class="ui two column grid">
-					<div class="column">
-						<b>Single Tenant Base ${grailsApplication.metadata['app.version']}</b>
-					</div>
-					<div class="column" style="text-align: right;">
-						<g:link controller="home" action="rad">
-							Powered By SRA RAD
-						</g:link>
-					</div>
-				</div>
+				<b>Single Tenant Base ${grailsApplication.metadata['app.version']}</b>
 			</div>
 		</div>
 		

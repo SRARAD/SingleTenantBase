@@ -13,11 +13,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **Spring Security** - Adds basic authentication to the project
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
 
-#### SRA Plugins
-
-- **SRA SAML** - Okta authentication for sattelite applications
-- **DB Backup** - Automatic H2 backups to S3
-
 ### Dependencies
 - **AWS Java SDK** - AWS SDK for Java
 - **MySQL Java Connector** - JDBC connector for MySQL
@@ -60,8 +55,6 @@ Things to do when first branching the base repository.
 - Refactor home controller and services to new package name.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
-- Search all files for stb.srarad.com and change to the new app URL.
-- Edit the configs under **SRA Plugins** in **Config.groovy**
 - Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reprots using codenarc.reports property as follows
 
 ```
@@ -87,9 +80,6 @@ The **Searchable** plugin is a powerful way to perform free text search on domai
 - Overwrite the default `toString()` method on searchable domain objects, this will be the title of the element when returned by a search query
 	- **Make sure that any fields and objects used in the `toString()` method are also searchable otherwise they will not be included in the Searchable index**
 - Add a `Collection<String> highlight()` method to the searchable domain objects which returnes a collection of all fields you want highlighted if they contain the search term (e.g. name, description)
-
-## SSO
-To enable SSO follow the instructions in the **SRA SAML Plugin** readme.
 
 ## Disconnecting and Pushing a New Project to GitHub
 This section describes the steps to disconnect a modified SingleTenantBase project from source control and pushing it as a new project to GitHub.

@@ -25,9 +25,6 @@ grails.project.dependency.resolution = {
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
-		// Set possible config locations
-		def loc = ['../UserConfig.groovy', 'webapps/ROOT/Jenkins.groovy'].grep { new File(it).exists() }.first();
-		def config = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File(loc).toURI().toURL())
 
         grailsPlugins()
         grailsHome()
@@ -35,14 +32,7 @@ grails.project.dependency.resolution = {
 
         mavenLocal()
         mavenCentral()
-		
-		mavenRepo('http://artifactory.srarad.com:8080/artifactory/SRA') {
-			auth([
-				realm: "Artifactory Realm",
-				username: config.artifactory.username,
-				password: config.artifactory.password
-			])
-        }
+
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
 		mavenRepo "http://repo.grails.org/grails/core"
@@ -70,8 +60,6 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-core:2.0-RC4"
 		compile ":export:1.6"
 		compile ":codenarc:0.21"
-		compile ":srasaml:0.3.3"
-		compile ":db-backups:0.3"
     }
 }
 codenarc.reports = {
