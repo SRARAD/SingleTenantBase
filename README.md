@@ -12,7 +12,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 - **Markdown** - Markdown renderer
 - **Spring Security** - Adds basic authentication to the project
 - **Spring Security UI** - Adds additional CRUD interfaces to Spring Security
-- **Spring Security OAuth2** - Adds oauth
 
 #### SRA Plugins
 
