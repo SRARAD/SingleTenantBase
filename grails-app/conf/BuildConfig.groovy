@@ -46,12 +46,6 @@ grails.project.dependency.resolution = {
 		mavenRepo "http://repo.spring.io/milestone/"
 		mavenRepo "http://download.java.net/maven/2/"
 		mavenRepo "http://repo.grails.org/grails/core"
-
-        // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
     }
 
     dependencies {
@@ -70,11 +64,6 @@ grails.project.dependency.resolution = {
 		compile ":executor:0.3"
 		compile ":markdown:1.1.1"
 
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0"
-        //runtime ":cached-resources:1.0"
-        //runtime ":yui-minify-resources:0.1.5"
-
         build ':tomcat:7.0.54'
         compile ':cache:1.1.1'
 		compile ":spring-security-ui:1.0-RC2"
@@ -86,12 +75,6 @@ grails.project.dependency.resolution = {
     }
 }
 codenarc.reports = {
-	// Each report definition is of the form:
-	//    REPORT-NAME(REPORT-TYPE) {
-	//        PROPERTY-NAME = PROPERTY-VALUE
-	//        PROPERTY-NAME = PROPERTY-VALUE
-	//    }
-	
     // uncomment this section if you want to generate xml report  
 	MyXmlReport('xml') {                    // The report name "MyXmlReport" is user-defined; Report type is 'xml'
 		outputFile = 'target/CodeNarcReport.xml'  // Set the 'outputFile' property of the (XML) Report
@@ -118,22 +101,3 @@ codenarc.maxPriority3Violations = 100
 
 //controls what happens when the maximum number of violations are exceeded
 codenarc.systemExitOnBuildException = false
-
-
-
-
-
-/*
-codenarc{
-	ruleSetFiles = "file:grails-app/conf/CodeNarcRules.groovy" // Ruleset file path
-	//maxPriority2Violations = 1
-	//systemExitOnBuildException = true
-	
-	reports = {
-	  HtmlReport('html') {    // Report type is 'html'
-		outputFile = 'target/CodeNarcReport.html' //Output file name
-		title = 'SingleTenantBase Code Narc Report' // Title of the file
-	  }
-	}
-}
-*/
