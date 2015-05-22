@@ -5,7 +5,6 @@ import com.sra.UserRole
 class BootStrap {
 
 	def springSecurityService
-	def clientDetailsService
 	def searchableService
 	def DBBackupService
 
