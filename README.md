@@ -78,10 +78,6 @@ codenarc.reports = {
 	}
 }
 ```
-- **SSL**
-  - Change the final DNS name in lines 23-24 of **web-app/.ebextensions/ssl.config** from the default.
-  - Change the server name in line 39.
-  - Change production database url value in DataSource.groovy from prodDb to something else
 
 ### Searchable
 
@@ -94,7 +90,6 @@ The **Searchable** plugin is a powerful way to perform free text search on domai
 
 ## SSO
 To enable SSO follow the instructions in the **SRA SAML Plugin** readme.
-
 
 ## Disconnecting and Pushing a New Project to GitHub
 This section describes the steps to disconnect a modified SingleTenantBase project from source control and pushing it as a new project to GitHub.
