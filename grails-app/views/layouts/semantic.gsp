@@ -7,18 +7,18 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Legal Tracker"/></title>
+		<title><g:layoutTitle default="Single Tenant Base"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="${resource(dir: 'static/js', file: 'jquery-2.1.0.js')}"></script>
 		<script src="${resource(dir: 'static/semantic', file: 'semantic.min.js')}"></script>
 		<script src="${resource(dir: 'static/js', file: 'jquery.blockUI.js')}"></script>
 		<link rel="stylesheet" href="${resource(dir: 'static/semantic', file: 'semantic.min.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'custom.css')}" type="text/css">
-	
+
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	
+
 	<body>
 		<div class="ui segment">
 			<div class="ui two column grid">
@@ -63,17 +63,17 @@
 				</div>
 			</sec:ifLoggedIn>
 		</div>
-		
+
 		<div class="content">
 			<g:layoutBody/>
 		</div>
-		
+
 		<div class="menu-wrapper">
 			<div class="ui segment" style="margin-bottom: 15px;">
 				<b>Single Tenant Base ${grailsApplication.metadata['app.version']}</b>
 			</div>
 		</div>
-		
+
 		<g:javascript library="application"/>
 		<r:layoutResources />
 		<script>
@@ -84,22 +84,21 @@
 					$('.menu-' + id).addClass('selected');
 				}
 			};
-			var flag=false;
-			var tab = 'tab0'
-			function goToURL(url){			
+			var flag = false;
+			var tab = 'tab0';
+			function goToURL(url) {
 				window.location = url+'&tab='+tab;
 			 }
 			$(function() {
 				$('.ui.dropdown').dropdown({
 					on: 'hover'
 				});
-				$('#nav > ul > li > a').click(function() {				
-					  $('#nav li').removeClass('active');					
-					});				
-				
-			});	
-			
-			function switchMenu (id){
+				$('#nav > ul > li > a').click(function() {
+					$('#nav li').removeClass('active');
+				});
+			});
+
+			function switchMenu(id) {
 				$('#'+id).closest('li').addClass('active');
 			}
 		</script>

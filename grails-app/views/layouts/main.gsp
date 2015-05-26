@@ -27,9 +27,6 @@
 	<body>
 		<div id="logo" role="banner">
 			<a href="${createLink(uri: '/')}"><img src="${resource(dir: 'static/images', file: 'RAD.png')}" alt="Rapid Application Devlopment"/></a>
-			<div style="float: right;">
-				<g:link controller="home" action="rad">Powered by SRA's RAD</g:link>
-			</div>
 		</div>
 		<div id="loginHeader">
 			<sec:ifLoggedIn>
