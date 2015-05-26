@@ -96,3 +96,7 @@ This section describes the steps to disconnect a modified SingleTenantBase proje
 - Right click on the project in 'Project Explorer' -> Team -> Share Project -> Git -> Make sure the checkbox at the top is checked -> Click on the project -> Create Repository -> Finish
 - Right click on the project in 'Project Explorer' -> Team -> Commit -> Write a commit message and select all files -> Commit
 - Right click on the project in 'Git Repository' -> Push Branch -> Enter the new repository information -> Next -> Next -> Finish
+
+## License
+
+**SingleTenantBase** has been released under the MIT license by [SRA International, INC](https://www.sra.com/). It was originally developed specifically for the [SRA Rapid Application Development Team](https://github.com/SRARAD).
