@@ -25,7 +25,6 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 ### Views
 - **Index** - Modified index page with basic home controller function links
-- **RAD** - About the RAD team page
 
 ### Bootstrap
 - **Users** - Creates a basic and admin user
@@ -41,9 +40,10 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 
 Log4j has been setup for the project to listen to all **com.sra** logging output.
 
-- **WARN** and above gets output to the console in the **dev** environment
-- **DEBUG** and above gets logged to **debug.log** in all environments
-- All page requests are recorded in **activity.log** in the root directory with the date, username, controller, and action
+- **ERROR** and above gets output to the console
+- **INFO** and above gets logged to **logs/info.log**
+- **WARN** and above gets logged to **logs/warn.log**
+- All page requests are recorded in **logs/activity.log** with the date, username, controller, and action
 
 ### Other
 - **Semantic UI** - Styling framework
