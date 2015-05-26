@@ -32,9 +32,10 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### JavaScript
 - **jQuery** - jQuery 2.1.0
 - **BlockUI** - Modal block for AJAX calls
-- **Chosen** - Select input enhancer
-- **jqPagination** - Pagination plugin
-- **Reveal** - Modal popups
+- **D3** - SVG visualization platform
+- **D3-tip** - Tooltips for D3
+- **Sweet-Alert** - Alert modal replacement
+- **Semantic-UI** - Action based frontend framework
 
 ### Logging
 

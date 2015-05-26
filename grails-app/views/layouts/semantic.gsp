@@ -9,11 +9,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Single Tenant Base"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="${resource(dir: 'static/js', file: 'jquery-2.1.0.js')}"></script>
-		<script src="${resource(dir: 'static/semantic', file: 'semantic.min.js')}"></script>
-		<script src="${resource(dir: 'static/js', file: 'jquery.blockUI.js')}"></script>
-		<link rel="stylesheet" href="${resource(dir: 'static/semantic', file: 'semantic.min.css')}" type="text/css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.4/semantic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.4/semantic.min.css" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'static/css', file: 'custom.css')}" type="text/css">
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" type="text/css"> -->
 
 		<g:layoutHead/>
 		<r:layoutResources />
