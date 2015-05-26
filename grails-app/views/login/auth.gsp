@@ -2,9 +2,15 @@
 	<head>
 		<meta name='layout' content='semantic'/>
 		<title><g:message code="springSecurity.login.title"/></title>
+		<style>
+			.content, .menu-wrapper {
+				width: 600px;
+				margin: 0 auto;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="ui segment" style="width: 600px; margin: 0 auto;">
+		<div class="ui segment">
 			<div class="ui header"><g:message code="springSecurity.login.header"/></div>
 	
 			<g:if test="${flash.message}">
