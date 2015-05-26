@@ -28,11 +28,11 @@
 			<div class="ui two column grid">
 				<div class="column">
 					<a href="${createLink(uri: '/')}">
-						<img class="ui image" src="${resource(dir: 'static/images', file: 'RAD.png')}" style="max-height: 80px;" />
+						<img class="ui image" src="https://s3.amazonaws.com/stb-content/RAD.png" style="max-height: 80px;" />
 					</a>
 				</div>
 				<div class="column" style="text-align: right;">
-	            	<img class="ui image small" style="display: inline-block;" src="${resource(dir: 'static/images', file: 'sralogo-blue.png')}" />
+					<img class="ui image small" style="display: inline-block;" src="https://s3.amazonaws.com/stb-content/sralogo-blue.png" />
 				</div>
 			</div>
 		</div>
