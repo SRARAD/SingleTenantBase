@@ -7,7 +7,7 @@ A base Grails 2.3.9 project for bootstrapping new projects.
 ### Plugins
 - **CodeNarc** - Generates static code analysis for Groovy code that can be viewed as html report or within jenkins violation   plugin
 - **Export** - Adds export functionality to domain objects in many different formats e.g. CSV, Excel, Open Document Spreadsheet, PDF and XML
-- **Searchable** - Makes domain objects searchableand can be extended to add additional formats
+- **Searchable** - Makes domain objects searchable and can be extended to add additional formats
 - **Executor** - Allows processes to be run in the background
 - **Markdown** - Markdown renderer
 - **Spring Security** - Adds basic authentication to the project
