@@ -76,40 +76,29 @@ environments {
     }
 }
 
-// log4j configuration
 log4j = {
-    // Example of changing the log pattern for the default console appender:
-    //
 	appenders {
-		console name:'stdout', layout:pattern(conversionPattern: '%p %c{2} %m%n'), threshold: org.apache.log4j.Level.WARN
-		file name: 'debug', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} %p %c{2} - %m%n'), file: 'debug.log', threshold: org.apache.log4j.Level.DEBUG
-		file name: 'activity', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), file: 'activity.log', threshold: org.apache.log4j.Level.INFO
-    }
-	root {
-		org.apache.log4j.Level.OFF
+		console name: 'stdout', threshold: org.apache.log4j.Level.ERROR
+		rollingFile name: 'info', file: 'logs/info.log', layout: pattern(conversionPattern: '[%p] %d{yyyy-MM-dd HH:mm:ss} %c{2} - %m%n'), threshold: org.apache.log4j.Level.INFO
+		rollingFile name: 'warn', file: 'logs/warn.log', layout: pattern(conversionPattern: '[%p] %d{yyyy-MM-dd HH:mm:ss} %c{2} - %m%n'), threshold: org.apache.log4j.Level.WARN
+		rollingFile name: 'activity', file: 'logs/activity.log', layout:pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss} - %m%n'), threshold: org.apache.log4j.Level.INFO
 	}
-	
-	environments {
-		development {
-			warn	stdout:	[
-				'grails.app.controllers.com.sra',
-				'grails.app.domain.com.sra',
-				'grails.app.services.com.sra',
-				'grails.app.taglib.com.sra',
-				'grails.app.conf.com.sra',
-				'grails.app.filters.com.sra'
-			], additivity: false
-		}
-	}
-    debug	debug:	[
+
+	warn 'warn': [
 		'grails.app.controllers.com.sra',
-		'grails.app.domain.com.sra',
 		'grails.app.services.com.sra',
-		'grails.app.taglib.com.sra',
 		'grails.app.conf.com.sra',
-		'grails.app.filters.com.sra'
-	], additivity: false
-    info	activity:	['grails.app.filters.com.sra.LoggingFilters'], additivity: false
+		'grails.app.domain.com.sra'
+	]
+
+	info 'info': [
+		'grails.app.controllers.com.sra',
+		'grails.app.services.com.sra',
+		'grails.app.conf.com.sra',
+		'grails.app.domain.com.sra'
+	]
+
+	info	activity:  ['grails.app.filters.com.sra.LoggingFilters']
 	off 'org.grails.plugin.resource.ResourceMeta'
 }
 
