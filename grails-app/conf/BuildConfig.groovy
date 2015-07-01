@@ -46,20 +46,20 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        compile ":hibernate:3.6.10.17"
-        runtime ":resources:1.2"
-		compile ":quartz:1.0.1"
-		compile ":scaffolding:2.0.3"
-		compile ":searchable:0.6.7"
-		compile ":executor:0.3"
-		compile ":markdown:1.1.1"
+		compile ":hibernate:3.6.10.17"
+        runtime ":resources:1.2.14"
+		
+			compile ":quartz:1.0.1"
+			compile ":scaffolding:2.1.0"
+			compile ":searchable:0.6.7"
+			compile ":executor:0.3"
+			compile ":markdown:1.1.1"
 
         build ':tomcat:7.0.54'
-        compile ':cache:1.1.1'
-		compile ":spring-security-ui:1.0-RC2"
-		compile ":spring-security-core:2.0-RC4"
-		compile ":export:1.6"
-		compile ":codenarc:0.21"
+			compile ":spring-security-ui:1.0-RC2"
+			compile ":spring-security-core:2.0-RC4"
+			compile ":jquery-ui:1.10.4"
+		
     }
 }
 codenarc.reports = {

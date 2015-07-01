@@ -102,6 +102,8 @@ log4j = {
 	off 'org.grails.plugin.resource.ResourceMeta'
 }
 
+grails.resources.resourceLocatorEnabled = true
+
 grails.app.context="/"
 
 grails.plugin.springsecurity.providerNames = [
