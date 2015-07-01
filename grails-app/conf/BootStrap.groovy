@@ -25,8 +25,7 @@ class BootStrap {
 				createUser('user','stbuser2014',userRole)
 			}
 		} catch (Exception e) {
-			log.error(e.toString())
-			e.printStackTrace()
+			log.error("Exception during bootstrap init", e)
 		}
 	}
 	def destroy = {

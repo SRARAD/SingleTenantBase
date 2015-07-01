@@ -1,4 +1,4 @@
-grails.servlet.version = "2.5" // Change depending on target container compliance (2.5 or 3.0)
+grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
@@ -46,17 +46,17 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-			compile ":hibernate:3.6.10.17"
+		runtime ":hibernate4:4.3.8.1"
 			compile ":asset-pipeline:2.3.2"
 			compile ":quartz:1.0.1"
-			compile ":scaffolding:2.1.0"
-			compile ":searchable:0.6.7"
+			compile ":scaffolding:2.1.2"
+			compile ":searchable:0.6.9"
 			compile ":executor:0.3"
 			compile ":markdown:1.1.1"
 
-        build ':tomcat:7.0.54'
+        build ':tomcat:7.0.55.2'
 			compile ":spring-security-ui:1.0-RC2"
-			compile ":spring-security-core:2.0-RC4"
+			compile ":spring-security-core:2.0-RC5"
 			compile ":jquery-ui:1.10.4"
 		
     }
