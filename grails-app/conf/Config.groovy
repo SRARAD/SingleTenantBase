@@ -15,23 +15,24 @@ grails.project.groupId = appName // change this to alter the default package nam
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [
-    all:           '*/*',
-    atom:          'application/atom+xml',
-    css:           'text/css',
-    csv:           'text/csv',
-    form:          'application/x-www-form-urlencoded',
-    html:          ['text/html','application/xhtml+xml'],
-    js:            'text/javascript',
-    json:          ['application/json', 'text/json'],
-    multipartForm: 'multipart/form-data',
-    rss:           'application/rss+xml',
-    text:          'text/plain',
-	csv: 			'text/csv',
-	pdf: 			'application/pdf',
-	rtf: 			'application/rtf',
-	excel: 			'application/vnd.ms-excel',
-	ods: 			'application/vnd.oasis.opendocument.spreadsheet',
-    xml:           ['text/xml', 'application/xml']
+    all:           	'*/*',
+    atom:          	'application/atom+xml',
+    css:           	'text/css',
+    csv:           	'text/csv',
+    form:          	'application/x-www-form-urlencoded',
+    html:          	['text/html','application/xhtml+xml'],
+    js:            	'text/javascript',
+    json:          	['application/json', 'text/json'],
+    multipartForm:	'multipart/form-data',
+    rss:			'application/rss+xml',
+    text:			'text/plain',
+		csv: 			'text/csv',
+		pdf: 			'application/pdf',
+		rtf: 			'application/rtf',
+		excel: 			'application/vnd.ms-excel',
+		ods: 			'application/vnd.oasis.opendocument.spreadsheet',
+	hal:         	['application/hal+json','application/hal+xml'],
+    xml:           	['text/xml', 'application/xml']
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
