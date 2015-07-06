@@ -4,7 +4,5 @@ class GenericController {
 
 	
 	static scaffold = true
-	
-	
-    def index() { }
+
 }

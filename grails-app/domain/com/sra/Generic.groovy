@@ -9,5 +9,9 @@ class Generic {
 	String string
 	
     static constraints = {
+		string()
+		wholeNumber()
+		decimal()
+		trueFalse()
     }
 }
