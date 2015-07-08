@@ -9,11 +9,8 @@
 	</head>
 	<body>
 		<div id="list-${domainClass.propertyName}" class="content scaffold-list" role="main">
-			<div class="two fields">
-				<div class="field "><h1><g:message code="default.list.label" args="[entityName]" /></h1></div>
-				<div class="field"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></div>
-			</div>
-			
+			<h1><g:message code="default.list.label" args="[entityName]" /> </h1>
+			<button class="ui button"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></button>
 			<g:if test="\${flash.message}">
 				<div class="message" role="status">\${flash.message}</div>
 			</g:if>
