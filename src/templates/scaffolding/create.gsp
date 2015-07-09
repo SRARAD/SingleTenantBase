@@ -6,14 +6,11 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div id="create-${domainClass.propertyName}" class="content scaffold-create" role="main">
 			<div class="ui segment">
 				<h1 class="ui header">
 					<g:message code="default.create.label" args="[entityName]" />
 				</h1>
-				<button class="ui button">
-					<g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
-				</button>
+					<g:link class="ui button" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
 				<g:if test="\${flash.message}">
 				<div class="message" role="status">\${flash.message}</div>
 				</g:if>
@@ -24,15 +21,10 @@
 					</g:eachError>
 				</ul>
 				</g:hasErrors>
-				<g:form url="[resource:${propertyName}, action:'save']" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
-					<form class="ui form">
-						<div class="ui field" >
+				<g:form class="ui form" url="[resource:${propertyName}, action:'save']" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<g:render template="form"/>
-						</div>
 						<g:submitButton name="create" class="ui button" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
-					</form>
 				</g:form>
 			</div>
-		</div>
 	</body>
 </html>

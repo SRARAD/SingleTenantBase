@@ -8,14 +8,11 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div id="list-${domainClass.propertyName}" class="content scaffold-list" role="main">
 			<div class="ui segment">
 				<h1 class="ui header">
 					<g:message code="default.list.label" args="[entityName]" />
 				</h1>
-				<button class="ui button">
-					<g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
-				</button>
+				<g:link class="ui button" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<g:if test="\${flash.message}">
 					<div class="message" role="status">\${flash.message}</div>
 				</g:if>
@@ -57,6 +54,5 @@
 					<g:paginate total="\${${propertyName}Count ?: 0}" />
 				</div>
 			</div>
-		</div>
 	</body>
 </html>
