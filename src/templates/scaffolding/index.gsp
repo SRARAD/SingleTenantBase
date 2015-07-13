@@ -12,7 +12,7 @@
 				<h1 class="ui header">
 					<g:message code="default.list.label" args="[entityName]" />
 				</h1>
-				<g:link class="ui button" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="positive ui button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<g:if test="\${flash.message}">
 					<div class="message" role="status">\${flash.message}</div>
 				</g:if>
@@ -50,9 +50,6 @@
 					</g:each>
 					</tbody>
 				</table>
-				<div class="pagination">
-					<g:paginate total="\${${propertyName}Count ?: 0}" />
-				</div>
 			</div>
 	</body>
 </html>

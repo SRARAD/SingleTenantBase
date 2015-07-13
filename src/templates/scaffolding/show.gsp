@@ -12,8 +12,8 @@
 				<h1 class="ui segmant">
 					<g:message code="default.show.label" args="[entityName]" />
 				</h1>
-				<g:link class="ui button" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="ui button" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="ui primary button" action="index"><i class="browser icon"></i><g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="positive ui button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<g:if test="\${flash.message}">
 				<div class="message" role="status">\${flash.message}</div>
 				</g:if>
@@ -44,8 +44,8 @@
 					</g:if>
 				<%  } %>
 				<g:form class="ui form" url="[resource:${propertyName}, action:'delete']" method="DELETE">
-					<g:link class="ui button" action="edit" resource="\${${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="ui button" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />					
+					<g:link class="ui button" action="edit" resource="\${${propertyName}}"><i class="edit icon"></i><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<g:actionSubmit class="negative ui button" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />					
 				</g:form>
 			</div>
 	</body>
