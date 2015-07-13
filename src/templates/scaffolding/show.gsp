@@ -12,20 +12,21 @@
 				<h1 class="ui header">
 					<g:message code="default.show.label" args="[entityName]" />
 				</h1>
-				<g:link class="ui primary button" action="index"><i class="browser icon"></i><g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="positive ui button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="ui primary labeled icon button" action="index"><i class="browser icon"></i><g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="positive ui labeled icon button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<div class="ui segment">	
 					<g:if test="\${flash.message}">
 						<div class="ui medium header" role="status">\${flash.message}</div>
 					</g:if>
 					<table class="ui definition table">
 							<tbody>
+							<tr>
 								<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 									allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 									props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && (domainClass.constrainedProperties[it.name] ? domainClass.constrainedProperties[it.name].display : true) }
 									Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 									props.each { p -> %>
-										<tr>
+										
 										<g:if test="\${${propertyName}?.${p.name}}">
 											<td><label id="${p.name}-label" class="property-label"><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}" /></label></td>
 											<%  if (p.isEnum()) { %>
@@ -44,12 +45,12 @@
 												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span></td>
 											<%  } %>
 										</g:if>
-										</tr>
 								<%  } %>
+						</tr>	
 						</tbody>
 					</table>
 					<g:form class="ui form" url="[resource:${propertyName}, action:'delete']" method="DELETE">
-						<g:link class="ui button" action="edit" resource="\${${propertyName}}"><i class="edit icon"></i><g:message code="default.button.edit.label" default="Edit" /></g:link>
+						<g:link class="ui labeled icon button" action="edit" resource="\${${propertyName}}"><i class="edit icon"></i><g:message code="default.button.edit.label" default="Edit" /></g:link>
 						<g:actionSubmit class="negative ui button" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />					
 					</g:form>
 				</div>
