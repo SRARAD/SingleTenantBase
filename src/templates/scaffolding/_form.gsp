@@ -36,9 +36,9 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 	}
 	%>
 <div class="field \${hasErrors(bean: ${propertyName}, field: '${prefix}${p.name}', 'error')} ${required ? 'required' : ''}">
-	<label for="${prefix}${p.name}">
+	<label class="ui medium header" for="${prefix}${p.name}">
 		<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
-		<% if (required) { %><span class="required-indicator">*</span><% } %>
+		<!--<% if (required) { %><span class="required-indicator">*</span><% } %> -->
 	</label>
 	${renderEditor(p)}
 </div>
