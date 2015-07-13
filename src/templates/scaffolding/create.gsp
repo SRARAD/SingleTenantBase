@@ -21,10 +21,12 @@
 					</g:eachError>
 				</ul>
 				</g:hasErrors>
-				<g:form class="ui form" url="[resource:${propertyName}, action:'save']" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
-						<g:render template="form"/>
-						<g:submitButton name="create" class="positive ui button" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
-				</g:form>
+				<div class="ui segment">
+					<g:form class="ui form" url="[resource:${propertyName}, action:'save']" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+							<g:render template="form"/>
+							<g:submitButton name="create" class="positive ui button" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
+					</g:form>
+				</div>
 			</div>
 	</body>
 </html>

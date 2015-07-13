@@ -23,11 +23,13 @@
 					</g:eachError>
 				</ul>
 				</g:hasErrors>
-				<g:form class="ui form" url="[resource:${propertyName}, action:'update']" method="PUT" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
-					<g:hiddenField name="version" value="\${${propertyName}?.version}" />
-						<g:render template="form"/>
-						<g:actionSubmit class="ui button" action="update" value="\${message(code: 'default.button.update.label', default: 'Update')}" />
-				</g:form>
+				<div class="ui segment">
+					<g:form class="ui form" url="[resource:${propertyName}, action:'update']" method="PUT" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+						<g:hiddenField name="version" value="\${${propertyName}?.version}" />
+							<g:render template="form"/>
+							<g:actionSubmit class="ui button" action="update" value="\${message(code: 'default.button.update.label', default: 'Update')}" />
+					</g:form>
+				</div>
 			</div>
 	</body>
 </html>
