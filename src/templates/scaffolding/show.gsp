@@ -18,7 +18,7 @@
 					<g:if test="\${flash.message}">
 						<div class="ui medium header" role="status">\${flash.message}</div>
 					</g:if>
-					<table class="ui definition table">
+					<table class="ui celled table">
 							<tbody>
 							<tr>
 								<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
@@ -28,21 +28,21 @@
 									props.each { p -> %>
 										
 										<g:if test="\${${propertyName}?.${p.name}}">
-											<td><label id="${p.name}-label" class="property-label"><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}" /></label></td>
+											<td><b><label id="${p.name}-label" class="property-label"><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}" /></label>-</b>
 											<%  if (p.isEnum()) { %>
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span>
 											<%  } else if (p.oneToMany || p.manyToMany) { %>
 												<g:each in="\${${propertyName}.${p.name}}" var="${p.name[0]}">
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:link controller="${p.referencedDomainClass?.propertyName}" action="show" id="\${${p.name[0]}.id}">\${${p.name[0]}?.encodeAsHTML()}</g:link></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:link controller="${p.referencedDomainClass?.propertyName}" action="show" id="\${${p.name[0]}.id}">\${${p.name[0]}?.encodeAsHTML()}</g:link></span>
 												</g:each>
 											<%  } else if (p.manyToOne || p.oneToOne) { %>
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:link controller="${p.referencedDomainClass?.propertyName}" action="show" id="\${${propertyName}?.${p.name}?.id}">\${${propertyName}?.${p.name}?.encodeAsHTML()}</g:link></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:link controller="${p.referencedDomainClass?.propertyName}" action="show" id="\${${propertyName}?.${p.name}?.id}">\${${propertyName}?.${p.name}?.encodeAsHTML()}</g:link></span>
 											<%  } else if (p.type == Boolean || p.type == boolean) { %>
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:formatBoolean boolean="\${${propertyName}?.${p.name}}" /></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:formatBoolean boolean="\${${propertyName}?.${p.name}}" /></span>
 											<%  } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:formatDate date="\${${propertyName}?.${p.name}}" /></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:formatDate date="\${${propertyName}?.${p.name}}" /></span>
 											<%  } else if (!p.type.isArray()) { %>
-												<td><span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span></td>
+												<span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span></td>
 											<%  } %>
 										</g:if>
 								<%  } %>
