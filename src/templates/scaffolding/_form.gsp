@@ -37,13 +37,13 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 	%>
 <div class="field \${hasErrors(bean: ${propertyName}, field: '${prefix}${p.name}', 'error')} ${required ? 'required' : ''}">
 	<g:if test="${p.type == Boolean || p.type == boolean ? 'ui toggle checkbox' : '' }">
-	<div class="ui toggle checkbox">
-		${renderEditor(p)}
-		<label for="${prefix}${p.name}">
-			<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
-			<!--<% if (required) { %><span class="required-indicator">*</span><% } %> -->
-		</label>
-	</div>
+		<div class="ui toggle checkbox">
+			${renderEditor(p)}
+			<label for="${prefix}${p.name}">
+				<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
+				<!--<% if (required) { %><span class="required-indicator">*</span><% } %> -->
+			</label>
+		</div>
 	</g:if>
 	<g:else>
 		<label class="ui medium header" for="${prefix}${p.name}">
@@ -53,3 +53,8 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 	</g:else>
 </div>
 <%  } %>
+<script>
+	\$(function() {
+		\$('.ui.checkbox').checkbox();
+	});
+</script>
