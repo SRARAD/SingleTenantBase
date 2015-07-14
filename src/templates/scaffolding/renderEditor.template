@@ -177,11 +177,11 @@
 				sb << '/>'
             } else {
 				sb << '<g:field'
+				sb << ' type="number"'
 				sb << ' name="' << property.name << '"'
 				if (property.type in [float, double, Float, Double, BigDecimal]) {
 					sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
 				} else {
-					sb << ' type="number"'
 					if (cp.min != null) sb << ' min="' << cp.min << '"'
 					if (cp.max != null) sb << ' max="' << cp.max << '"'
 					sb << ' value="${' << domainInstance << '.' << property.name << '}"'
