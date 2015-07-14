@@ -177,7 +177,7 @@
 				sb << '/>'
             } else {
 				sb << '<g:field'
-				sb << ' type="number"'
+				sb << ' type="text"'
 				sb << ' name="' << property.name << '"'
 				if (property.type in [float, double, Float, Double, BigDecimal]) {
 					sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
