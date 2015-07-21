@@ -103,7 +103,7 @@
  			sb << ' optionKey="id"'
 			if (isRequired()) sb << ' required=""'
  			sb << ' value="${' << "${domainInstance}?.${property.name}" << '?.id}"'
- 			sb << ' class="many-to-one"'
+ 			sb << ' class="ui search dropdown"'
  			sb << renderNoSelection(property)
  			sb << '/>'
 			sb as String

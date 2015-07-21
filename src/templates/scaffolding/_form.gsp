@@ -57,4 +57,8 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 	\$(function() {
 		\$('.ui.checkbox').checkbox();
 	});
+
+	\$('select.dropdown')
+	  .dropdown()
+	;
 </script>
