@@ -13,10 +13,11 @@
 					<g:message code="default.list.label" args="[entityName]" />
 				</h1>
 				<g:link class="positive ui labeled icon button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
-				<g:if test="\${flash.message}">
-					<div class="message" role="status">\${flash.message}</div>
-				</g:if>
+				
 				<div class="ui segment">
+					<g:if test="\${flash.message}">
+						<div class="ui medium header" role="status">\${flash.message}</div>
+					</g:if>
 					<table class="ui unstackable table">
 					<thead>
 							<tr>
