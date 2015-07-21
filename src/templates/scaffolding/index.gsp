@@ -16,7 +16,12 @@
 				
 				<div class="ui segment">
 					<g:if test="\${flash.message}">
-						<div class="ui medium header" role="status">\${flash.message}</div>
+						<div class="ui negative icon message">
+							<i class="inbox icon"></i>
+							<div class="content">	
+								<div class="header" role="status">\${flash.message}</div>
+							</div>
+						</div>
 					</g:if>
 					<table class="ui unstackable table">
 					<thead>

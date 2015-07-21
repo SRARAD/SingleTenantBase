@@ -16,7 +16,12 @@
 				<g:link class="positive ui labeled icon button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<div class="ui segment">	
 					<g:if test="\${flash.message}">
-						<div class="ui medium header" role="status">\${flash.message}</div>
+						<div class="ui positive icon message">
+							<i class="thumbs up icon"></i>
+							<div class="content">
+								<div class="header" role="status">\${flash.message}</div>
+							</div>
+						</div>
 					</g:if>
 					<table class="ui celled table">
 							<tbody>

@@ -139,7 +139,7 @@
         def sw = new StringWriter()
         def pw = new PrintWriter(sw)
         pw.println()
-        pw.println '<ul class="one-to-many">'
+        pw.println '<ul class="ui list">'
         pw.println "<g:each in=\"\${${domainInstance}?.${property.name}?}\" var=\"${property.name[0]}\">"
         pw.println "    <li><g:link controller=\"${property.referencedDomainClass.propertyName}\" action=\"show\" id=\"\${${property.name[0]}.id}\">\${${property.name[0]}?.encodeAsHTML()}</g:link></li>"
         pw.println '</g:each>'
