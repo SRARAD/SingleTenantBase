@@ -8,6 +8,9 @@ class Generic {
 	boolean trueFalse
 	String string
 	String mylist
+	// User user //many to one relationship
+	//static hasOne = [user: User] // one to one relationship
+	//static hasMany = [user: User] // one to many 
 	
     static constraints = {
 		string()
