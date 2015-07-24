@@ -17,7 +17,7 @@
 				<g:if test="\${flash.message}">
 					<div class="ui negative icon message">
 						<i class="remove circle outline icon"></i>
-						<div class="content">	
+						<div class="content">
 							<div class="header" role="status">\${flash.message}</div>
 						</div>
 					</div>
