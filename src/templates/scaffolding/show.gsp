@@ -12,12 +12,12 @@
 				<h1 class="ui header">
 					<g:message code="default.show.label" args="[entityName]" />
 				</h1>
-				<g:link class="ui primary labeled icon button" action="index"><i class="browser icon"></i><g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="ui primary labeled icon button" action="index"><i class="list icon"></i><g:message code="default.list.label" args="[entityName]" /></g:link>
 				<g:link class="positive ui labeled icon button" action="create"><i class="write icon"></i><g:message code="default.new.label" args="[entityName]" /></g:link>
 				<div class="ui segment">	
 					<g:if test="\${flash.message}">
 						<div class="ui positive icon message">
-							<i class="thumbs up icon"></i>
+							<i class="checkmark icon"></i>
 							<div class="content">
 								<div class="header" role="status">\${flash.message}</div>
 							</div>
