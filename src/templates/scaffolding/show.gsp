@@ -19,7 +19,8 @@
 						<div class="ui positive icon message">
 							<i class="checkmark icon"></i>
 							<div class="content">
-								<div class="header" role="status">\${flash.message}</div>
+								<div class="header" role="status">Success</div>
+								<p>\${flash.message}</p>
 							</div>
 						</div>
 					</g:if>

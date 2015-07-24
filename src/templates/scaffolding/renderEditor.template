@@ -127,7 +127,7 @@
             sb << ' size="5"'
             if (isRequired()) sb << ' required=""'
             sb << ' value="${' << "${domainInstance}?.${property.name}" << '*.id}"'
-            sb << ' class="many-to-many"'
+            sb << ' class="ui dropdown"'
             sb << '/>'
             sb as String
 
