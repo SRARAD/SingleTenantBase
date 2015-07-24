@@ -20,15 +20,12 @@ class BootStrap {
 			if (UserRole.list().size() == 0) { //only load on empty DB
 				def adminRole = new Role(authority:'ROLE_ADMIN').save(flush:true)
 				def userRole = new Role(authority:'ROLE_USER').save(flush:true)
-	
+
 				createUser('admin','stbadmin2014',adminRole)
 				createUser('user','stbuser2014',userRole)
 			}
 		} catch (Exception e) {
 			log.error("Exception during bootstrap init", e)
 		}
-	}
-	def destroy = {
-		
 	}
 }
