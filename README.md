@@ -1,6 +1,6 @@
 SingleTenantBase
 =========
-A base Grails 2.3.9 project for bootstrapping new projects.
+A base Grails 2.4.5 project for bootstrapping new projects.
 
 ## Additions to base project
 
