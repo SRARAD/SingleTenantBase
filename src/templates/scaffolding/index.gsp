@@ -56,7 +56,20 @@
 						</g:each>
 					</tbody>
 				</table>
+				<div style="text-align: center;">
+					<div class="ui pagination inverted blue menu">
+						<g:paginate total="\${${propertyName}Count ?: 0}" />
+					</div>
+				</div>
 			</div>
 		</div>
+		<script>
+			\$(function() {
+				\$('.step').addClass('item');
+				\$('.step.gap').addClass('disabled');
+				\$('.currentStep').addClass('active item');
+				\$('.prevLink, .nextLink').addClass('item');
+			});
+		</script>
 	</body>
 </html>
