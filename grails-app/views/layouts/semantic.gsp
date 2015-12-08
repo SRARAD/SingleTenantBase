@@ -32,7 +32,7 @@
 					</a>
 				</div>
 				<div class="column" style="text-align: right;">
-					<img class="ui image small" style="display: inline-block;" src="https://s3.amazonaws.com/stb-content/sralogo-blue.png" />
+					<img class="ui image" style="display: inline-block;margin-top:5px;" src="https://s3.amazonaws.com/stb-content/CSRA_Logo.svg" />				
 				</div>
 			</div>
 		</div>
