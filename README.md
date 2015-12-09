@@ -56,7 +56,7 @@ Things to do when first branching the base repository.
 - Refactor home controller and services to new package name.
 - Change base users' passwords.
 - Search all files for SingleTenantBase and change to new app name.
-- Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reprots using codenarc.reports property as follows
+- Add any number of codeNarc properties into grails-app/conf/BuildConfig.groovy. For example, you can configure one or more reports using codenarc.reports property as follows
 
 ```
 codenarc.reports = {
