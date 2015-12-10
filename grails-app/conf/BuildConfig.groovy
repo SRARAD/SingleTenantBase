@@ -54,16 +54,16 @@ grails.project.dependency.resolution = {
 codenarc.reports = {
 	MyXmlReport('xml') {
 		outputFile = 'target/CodeNarcReport.xml'
-		title = 'SingleTenantBase XML Report'
+		title = 'Codenarc XML Report'
 	}
 
 
 	MyHtmlReport('html') {
 		outputFile = 'target/CodeNarcReport.html'
-		title = 'SingleTenantBase html Report'
+		title = 'Codenarc html Report'
 	}
 }
-codenarc.ruleSetFiles="file:grails-app/conf/CodeNarcRules.groovy"
+codenarc.ruleSetFiles="file:test/CodeNarcRules.groovy"
 
 codenarc.properties = {
 	GrailsPublicControllerMethod.enabled = false
