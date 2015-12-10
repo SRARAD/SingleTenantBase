@@ -11,13 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.4/semantic.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.4/semantic.min.css" type="text/css">
 		<asset:stylesheet href="custom.css" />
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" type="text/css">
 
 		<g:layoutHead/>
 		<r:layoutResources />
@@ -43,19 +40,9 @@
 						<i class="icon home"></i>
 						Home
 					</a>
-					<sec:ifAllGranted roles="ROLE_ADMIN">
-						<div class="ui dropdown item">
-							<i class="icon setting"></i>
-							Admin Actions<i class="icon dropdown"></i>
-							<div class="menu">
-								<g:link class="item" controller="user">Edit Users</g:link>
-							   <a class="item" href="/controllers">Internal Controllers</a>
-							</div>
-						</div>
-					</sec:ifAllGranted>
 					<div class="right menu">
 						<div class="ui dropdown item">
-							<i class="icon dropdown"></i> <sec:username/>
+							<sec:username/><i class="icon dropdown"></i>
 							<div class="menu">
 								<a class="item" href="/home/changePassword">Change Your Password</a>
 								<g:link class="item" controller="logout">
@@ -78,7 +65,6 @@
 			</div>
 		</div>
 
-		<g:javascript library="application"/>
 		<r:layoutResources />
 		<script>
 			var activeMenu = function(id) {
@@ -88,23 +74,11 @@
 					$('.menu-' + id).addClass('selected');
 				}
 			};
-			var flag = false;
-			var tab = 'tab0';
-			function goToURL(url) {
-				window.location = url+'&tab='+tab;
-			 }
 			$(function() {
 				$('.ui.dropdown').dropdown({
 					on: 'hover'
 				});
-				$('#nav > ul > li > a').click(function() {
-					$('#nav li').removeClass('active');
-				});
 			});
-
-			function switchMenu(id) {
-				$('#'+id).closest('li').addClass('active');
-			}
 		</script>
 	</body>
 </html>
