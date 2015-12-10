@@ -85,8 +85,6 @@ grails.plugin.springsecurity.providerNames = [
 	'rememberMeAuthenticationProvider'
 ]
 
-grails.plugin.dbbackups.stem = 'sample'
-
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.sra.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.sra.UserRole'
