@@ -44,7 +44,6 @@
 						<div class="ui dropdown item">
 							<sec:username/><i class="icon dropdown"></i>
 							<div class="menu">
-								<a class="item" href="/home/changePassword">Change Your Password</a>
 								<g:link class="item" controller="logout">
 									<i class="icon sign out"></i> Logout
 								</g:link>
