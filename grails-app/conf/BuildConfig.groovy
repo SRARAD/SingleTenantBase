@@ -40,7 +40,6 @@ grails.project.dependency.resolution = {
 		compile ":asset-pipeline:2.3.2"
 		compile ":quartz:1.0.1"
 		compile ":scaffolding:2.1.2"
-		compile ":searchable:0.6.9"
 
 		build ':tomcat:7.0.55.2'
 		compile ":spring-security-core:2.0-RC5"
